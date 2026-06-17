@@ -550,7 +550,7 @@ body.clean #eye:hover{opacity:1}
 
   // dots
   slides.forEach((_,i)=>{
-    const d=document.createElement('div');d.className='dot';d.onclick=()=>goSlide(i,true);
+    const d=document.createElement('div');d.className='dot';d.onclick=function(){goSlide(i,true);this.blur();};
     dotsBox.appendChild(d);
   });
   const dots=[...dotsBox.children];
@@ -617,8 +617,8 @@ body.clean #eye:hover{opacity:1}
     else if(si>0){ goSlide(si-1,false); }
   }
 
-  document.getElementById('next').onclick=next;
-  document.getElementById('prev').onclick=prev;
+  document.getElementById('next').onclick=function(){next();this.blur();};
+  document.getElementById('prev').onclick=function(){prev();this.blur();};
   document.addEventListener('keydown',e=>{
     if(e.key==='ArrowRight'||e.key===' '||e.key==='PageDown'){e.preventDefault();next();}
     else if(e.key==='ArrowLeft'||e.key==='PageUp'){e.preventDefault();prev();}
@@ -630,7 +630,7 @@ body.clean #eye:hover{opacity:1}
     }
     else if(e.key.toLowerCase()==='h'){document.body.classList.toggle('clean');}
   });
-  document.getElementById('eye').onclick=()=>document.body.classList.toggle('clean');
+  document.getElementById('eye').onclick=function(){document.body.classList.toggle('clean');this.blur();};
 
   goSlide(0,true);
 })();
