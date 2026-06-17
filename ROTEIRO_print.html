@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<title>Roteiro — FinUP Etapa 3</title>
+<style>
+@page{size:A4;margin:14mm 14mm 16mm}
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --navy:#0f1b33;--ink:#1c2638;--soft:#52617a;--dim:#8a97ad;
+  --green:#0f9d6e;--green-l:#e7f7f0;--line:#e4e9f0;--bg:#fff;
+  --font:"Inter","Segoe UI",system-ui,-apple-system,sans-serif;
+}
+body{font-family:var(--font);color:var(--ink);font-size:10.5pt;line-height:1.5;background:var(--bg);-webkit-print-color-adjust:exact;print-color-adjust:exact}
+
+/* ---------- CAPA ---------- */
+.cover{height:265mm;display:flex;flex-direction:column;justify-content:center;text-align:center;page-break-after:always;
+  background:linear-gradient(160deg,#0b1426 0%,#10213c 60%,#0d2e2a 100%);color:#fff;margin:-14mm -14mm 0;padding:0 22mm}
+.cover .tag{font-size:9pt;letter-spacing:.32em;text-transform:uppercase;color:#34d399;font-weight:700;margin-bottom:18px}
+.cover h1{font-size:30pt;font-weight:800;line-height:1.1;letter-spacing:-.02em;margin-bottom:10px}
+.cover h1 .g{color:#34d399}
+.cover .rule{width:80px;height:3px;background:#34d399;margin:20px auto;border-radius:3px}
+.cover p{color:#aab6cc;font-size:11pt;max-width:60ch;margin:0 auto}
+.cover .meta{margin-top:40px;color:#7d8aa3;font-size:9.5pt;line-height:1.8}
+.cover .badge{display:inline-block;margin-top:30px;padding:10px 20px;border:1px solid rgba(52,211,153,.4);border-radius:999px;color:#34d399;font-size:9.5pt;font-weight:600}
+
+/* ---------- COMO USAR ---------- */
+.howto{background:var(--green-l);border:1px solid #bfe9d8;border-radius:12px;padding:16px 20px;margin-bottom:22px}
+.howto h2{color:var(--green);font-size:12pt;margin-bottom:8px}
+.howto ul{list-style:none}
+.howto li{padding-left:18px;position:relative;margin-bottom:5px;font-size:10pt;color:var(--ink)}
+.howto li::before{content:"›";position:absolute;left:0;color:var(--green);font-weight:800}
+.howto .gold{margin-top:10px;padding:10px 14px;background:#fff;border-left:3px solid var(--green);border-radius:6px;font-size:9.7pt}
+
+h2.section{font-size:11pt;color:var(--navy);text-transform:uppercase;letter-spacing:.08em;margin:6px 0 12px;padding-bottom:6px;border-bottom:2px solid var(--line)}
+
+/* ---------- BLOCO DE SLIDE ---------- */
+.slide{border:1px solid var(--line);border-radius:14px;margin-bottom:16px;overflow:hidden;page-break-inside:avoid;break-inside:avoid}
+.slide .head{display:flex;align-items:center;gap:12px;padding:12px 18px;color:#fff;background:linear-gradient(90deg,#0f1b33 0%,#123a30 70%,#0f9d6e 100%)}
+.slide .head .snum{font-size:15pt;font-weight:800;opacity:.85}
+.slide .head .stitle{font-size:11.5pt;font-weight:700;flex:1}
+.slide .body{padding:14px 18px}
+.intro{font-size:9.3pt;color:var(--dim);font-style:italic;margin-bottom:10px}
+
+/* fala + clique */
+.line{display:flex;gap:10px;margin-bottom:9px;align-items:flex-start}
+.line .cue{flex:0 0 auto;margin-top:1px}
+.fala{background:#f7f9fc;border-radius:8px;padding:9px 13px;font-size:10pt;line-height:1.5;flex:1;border-left:3px solid var(--line)}
+.fala b{color:var(--navy)}
+.click{display:inline-flex;align-items:center;gap:4px;background:var(--green);color:#fff;font-weight:700;font-size:8.5pt;padding:5px 11px;border-radius:999px;white-space:nowrap}
+.click .arrow{font-size:11pt;line-height:1}
+.note{font-size:8.7pt;color:var(--dim);margin:2px 0 8px 30px;font-style:italic}
+.turn{margin-top:6px;font-size:9pt;color:var(--green);font-weight:700;display:flex;align-items:center;gap:6px}
+.turn::before{content:"⟶";font-size:11pt}
+
+.tips{background:var(--navy);color:#dbe3ef;border-radius:12px;padding:16px 20px;margin-top:8px;page-break-inside:avoid}
+.tips h2{color:#34d399;font-size:11.5pt;margin-bottom:9px}
+.tips li{margin-bottom:6px;font-size:9.7pt;list-style:none;padding-left:18px;position:relative}
+.tips li::before{content:"✓";position:absolute;left:0;color:#34d399;font-weight:800}
+.tips b{color:#fff}
+.footer{text-align:center;color:var(--dim);font-size:8.5pt;margin-top:14px}
+</style>
+</head>
+<body>
+
+<!-- ========== CAPA ========== -->
+<section class="cover">
+  <div class="tag">Roteiro de Apresentação · Vídeo</div>
+  <h1>FinUP — Etapa 3<br/><span class="g">Impactos Macroeconômicos</span><br/>e Desenvolvimento Local</h1>
+  <div class="rule"></div>
+  <p>Guia de narração: o que falar e quando clicar a seta — sincronizado com a apresentação animada.</p>
+  <div class="meta">Anna Beatriz Neres · Bianca Lauanny Neres · Flávio Ambiplay de Assis Jr.<br/>Gustavo Martinelly de Lima · Samuel Silva de Lima<br/>GECTI · UFRN · 2026</div>
+  <div class="badge">⏱ Duração estimada: 6 a 7 minutos · 10 slides</div>
+</section>
+
+<!-- ========== COMO USAR ========== -->
+<div class="howto">
+  <h2>🎬 Como funciona a máquina</h2>
+  <ul>
+    <li>Abra <b>index.html</b> no navegador e aperte <b>F</b> (tela cheia) e <b>H</b> (esconde a interface pra gravar limpo).</li>
+    <li>Cada clique na seta <b>›</b> (ou tecla <b>→</b>) dá <b>zoom/foco no próximo item</b> — igual edição de vídeo. O resto escurece.</li>
+    <li>Quando os itens do slide acabam, o próximo <b>›</b> vira de slide sozinho. A seta <b>‹</b> (ou ←) volta.</li>
+  </ul>
+  <div class="gold"><b>Regra de ouro:</b> só clique <b>›</b> DEPOIS de terminar a frase. Falou → clicou → o próximo item entra em foco → continua falando. Assim o vídeo fica sincronizado.</div>
+</div>
+
+<h2 class="section">🎞️ Roteiro slide a slide</h2>
+
+<!-- SLIDE 1 -->
+<div class="slide">
+  <div class="head"><span class="snum">01</span><span class="stitle">Capa</span></div>
+  <div class="body">
+    <p class="intro">A logo e o título já aparecem ao abrir. Comece falando.</p>
+    <div class="line"><div class="fala">"Olá! Somos o grupo da <b>FinUP</b>, e hoje vamos apresentar a Etapa 3 do nosso projeto: os <b>impactos macroeconômicos e o desenvolvimento local</b> que a nossa solução pode gerar."</div></div>
+    <div class="line"><span class="click"><span class="arrow">›</span></span><div class="fala">"Esse é um estudo de viabilidade econômica do nosso negócio."</div></div>
+    <p class="note">entra o selo "Estudo de Viabilidade Econômica"</p>
+    <div class="line"><span class="click"><span class="arrow">›</span></span><div class="fala">"O título resume nossa tese: a FinUP como ferramenta de <b>desenvolvimento regional e sustentabilidade macroeconômica</b>."</div></div>
+    <div class="line"><span class="click"><span class="arrow">›</span><span class="arrow">›</span></span><div class="fala">"Vamos analisar três frentes: geração de valor pro PIB, o mercado de trabalho potiguar e a retenção de divisas no país."</div></div>
+    <div class="line"><span class="click"><span class="arrow">›</span></span><div class="fala">"Esse trabalho é da nossa equipe, da disciplina de GECTI, na UFRN."</div></div>
+    <p class="turn">clique › vira pro Slide 2</p>
+  </div>
+</div>
+
+<!-- SLIDE 2 -->
+<div class="slide">
+  <div class="head"><span class="snum">02</span><span class="stitle">O Cenário</span></div>
+  <div class="body">
+    <p class="intro">O título "O Brasil que não controla o próprio dinheiro" já aparece.</p>
+    <div class="line"><div class="fala">"Antes de falar do impacto da FinUP, é importante entender o problema. O Brasil vive uma crise de saúde financeira."</div></div>
+    <div class="line"><span class="click"><span class="arrow">›</span></span><div class="fala">"Hoje são <b>81,7 milhões de brasileiros inadimplentes</b> — recorde histórico. Quase metade dos adultos do país, segundo a Serasa."</div></div>
+    <div class="line"><span class="click"><span class="arrow">›</span></span><div class="fala">"E <b>80,2% das famílias estão endividadas</b> — o maior nível já registrado desde 2010, segundo a CNC."</div></div>
+    <div class="line"><span class="click"><span class="arrow">›</span></span><div class="fala">"O mais grave: <b>47% dos jovens da Geração Z não controlam as próprias finanças</b>, e só 9% usam aplicativo pra isso."</div></div>
+    <div class="line"><span class="click"><span class="arrow">›</span></span><div class="fala">"No exame de educação financeira da OCDE, o Brasil tirou só 416 pontos, contra 498 da média. É nesse vácuo que a FinUP entra."</div></div>
+    <p class="turn">clique › vira pro Slide 3</p>
+  </div>
+</div>
+
+<!-- SLIDE 3 -->
+<div class="slide">
+  <div class="head"><span class="snum">03</span><span class="stitle">Nossa Pesquisa de Campo</span></div>
+  <div class="body">
+    <p class="intro">Título "Validação de Mercado" já aparece.</p>
+    <div class="line"><div class="fala">"Esses são dados nacionais. Mas a gente quis ouvir o nosso público direto."</div></div>
+    <div class="line"><span class="click"><span class="arrow">›</span></span><div class="fala">"Aplicamos uma pesquisa com <b>75 jovens</b> — 88% do Rio Grande do Norte, a maioria entre 18 e 24 anos. E o problema se confirma na prática:"</div></div>
+    <div class="line"><span class="click"><span class="arrow">›</span></span><div class="fala">"<b>76% já ficaram sem dinheiro antes do fim do mês.</b>"</div></div>
+    <div class="line"><span class="click"><span class="arrow">›</span></span><div class="fala">"<b>70,7% não usam nenhum aplicativo financeiro</b> hoje — ou seja, é um mercado em aberto."</div></div>
+    <div class="line"><span class="click"><span class="arrow">›</span></span><div class="fala">"E o melhor: <b>92% usariam a FinUP</b> — somando 'sim' e 'talvez'."</div></div>
+    <div class="line"><span class="click"><span class="arrow">›</span></span><div class="fala">"A disposição a pagar valida um <b>ticket-médio em torno de R$ 7,50</b>, que é o preço que projetamos."</div></div>
+    <div class="line"><span class="click"><span class="arrow">›</span></span><div class="fala">"Tudo isso é dado primário, da nossa pesquisa de campo."</div></div>
+    <p class="turn">clique › vira pro Slide 4</p>
+  </div>
+</div>
+
+<!-- SLIDE 4 -->
+<div class="slide">
+  <div class="head"><span class="snum">04</span><span class="stitle">3.1 · PIB e Valor Agregado</span></div>
+  <div class="body">
+    <p class="intro">Título "3.1 · PIB e Valor Agregado Potiguar" já aparece.</p>
+    <div class="line"><div class="fala">"Vamos ao primeiro item da Etapa 3: como a FinUP contribui pro PIB."</div></div>
+    <div class="line"><span class="click"><span class="arrow">›</span></span><div class="fala">"O PIB do Rio Grande do Norte passou de <b>R$ 101 bilhões</b> pela primeira vez, segundo o IBGE — quase 1% do PIB do Brasil."</div></div>
+    <div class="line"><span class="click"><span class="arrow">›</span></span><div class="fala">"E olha que importante: <b>72% desse PIB vêm do setor de serviços</b> — exatamente onde a FinUP atua."</div></div>
+    <div class="line"><span class="click"><span class="arrow">›</span></span><div class="fala">"Além disso, a economia criativa já é <b>3,59% do PIB nacional</b>, e a FinUP, sendo tecnologia e conhecimento, se encaixa nesse setor."</div></div>
+    <div class="line"><span class="click"><span class="arrow">›</span></span><div class="fala">"Na contribuição direta: o Brasil tem mais de 1.700 fintechs e lidera a América Latina. A FinUP moderniza o setor de serviços do RN e captura valor das transações locais."</div></div>
+    <div class="line"><span class="click"><span class="arrow">›</span></span><div class="fala">"E tem o efeito multiplicador: ao reduzir os juros de mora que os jovens pagam, esse dinheiro volta a circular no comércio local."</div></div>
+    <p class="turn">clique › vira pro Slide 5</p>
+  </div>
+</div>
+
+<!-- SLIDE 5 -->
+<div class="slide">
+  <div class="head"><span class="snum">05</span><span class="stitle">Projeções Macroeconômicas</span></div>
+  <div class="body">
+    <p class="intro">Título "Projeções Macroeconômicas" já aparece. A tabela revela uma linha por clique.</p>
+    <div class="line"><div class="fala">"Aqui estão nossas projeções pros três primeiros anos, num cenário conservador."</div></div>
+    <div class="line"><span class="click"><span class="arrow">›</span></span><div class="fala">"Dividimos em três fases: foco local, foco regional e consolidação."</div></div>
+    <div class="line"><span class="click"><span class="arrow">›</span></span><div class="fala">"O <b>faturamento</b> estimado vai de R$ 450 mil no primeiro ano pra R$ 3,1 milhões no terceiro."</div></div>
+    <div class="line"><span class="click"><span class="arrow">›</span></span><div class="fala">"Isso gera <b>retenção tributária</b> local, em ISS e ICMS, chegando a R$ 155 mil — dinheiro que fica no estado."</div></div>
+    <div class="line"><span class="click"><span class="arrow">›</span></span><div class="fala">"Em <b>empregos diretos e indiretos</b>, saímos de 12 e chegamos a 85 postos."</div></div>
+    <div class="line"><span class="click"><span class="arrow">›</span></span><div class="fala">"E projetamos atrair até <b>R$ 1 milhão de capital externo de fomento</b> pro Rio Grande do Norte."</div></div>
+    <div class="line"><span class="click"><span class="arrow">›</span></span><div class="fala">"São projeções ancoradas em programas reais de fomento."</div></div>
+    <p class="turn">clique › vira pro Slide 6</p>
+  </div>
+</div>
+
+<!-- SLIDE 6 -->
+<div class="slide">
+  <div class="head"><span class="snum">06</span><span class="stitle">3.2 · Investimentos e Emprego</span></div>
+  <div class="body">
+    <p class="intro">Título "3.2 · Investimentos e Geração de Emprego" já aparece.</p>
+    <div class="line"><div class="fala">"Esse é o segundo ponto da Etapa 3: emprego e investimento."</div></div>
+    <div class="line"><span class="click"><span class="arrow">›</span></span><div class="fala">"Primeiro, os <b>empregos diretos</b>: a FinUP contrata gente de tecnologia — desenvolvimento, dados e segurança — absorvendo talentos da UFRN e do IFRN. O salário médio de um dev pleno no Brasil é quase R$ 8 mil."</div></div>
+    <div class="line"><span class="click"><span class="arrow">›</span></span><div class="fala">"Segundo, a <b>cadeia indireta</b>: segundo o IPEA, cada emprego em alta tecnologia gera até <b>6,9 empregos</b> em serviços locais."</div></div>
+    <div class="line"><span class="click"><span class="arrow">›</span></span><div class="fala">"Terceiro, <b>atração de capital</b>: existem programas reais aqui, como o Centelha do RN e o FIP Nordeste, um fundo de R$ 150 milhões que cita fintech explicitamente."</div></div>
+    <div class="line"><span class="click"><span class="arrow">›</span></span><div class="fala">"E uma oportunidade enorme: o Nordeste tem <b>25% das startups do Brasil</b>, mas recebe menos de 1% do investimento. A FinUP ajuda a virar esse jogo."</div></div>
+    <p class="turn">clique › vira pro Slide 7</p>
+  </div>
+</div>
+
+<!-- SLIDE 7 -->
+<div class="slide">
+  <div class="head"><span class="snum">07</span><span class="stitle">3.3 · Retenção de Divisas</span></div>
+  <div class="body">
+    <p class="intro">Título "3.3 · Soberania e Retenção de Divisas" já aparece.</p>
+    <div class="line"><div class="fala">"O terceiro ponto da Etapa 3 é o setor externo: como a FinUP impede que dinheiro saia do país."</div></div>
+    <div class="line"><span class="click"><span class="arrow">›</span></span><div class="fala">"O Brasil tem um déficit recorde de <b>US$ 52,9 bilhões</b> na balança de serviços — divisas saindo do país, segundo o Banco Central."</div></div>
+    <div class="line"><span class="click"><span class="arrow">›</span></span><div class="fala">"Só em <b>software, streaming e nuvem estrangeiros</b>, saíram quase <b>US$ 16 bilhões</b> num único ano."</div></div>
+    <div class="line"><span class="click"><span class="arrow">›</span></span><div class="fala">"A FinUP funciona como <b>alternativa nacional</b> a esses sistemas que levam taxas e dados pra fora. Hoje, 85% das bandeiras de cartão no Brasil são estrangeiras."</div></div>
+    <div class="line"><span class="click"><span class="arrow">›</span></span><div class="fala">"E ainda há espaço pra exportar: a FinUP pode mirar o Mercosul e os países que falam português, a CPLP — quase 300 milhões de pessoas."</div></div>
+    <p class="turn">clique › vira pro Slide 8</p>
+  </div>
+</div>
+
+<!-- SLIDE 8 -->
+<div class="slide">
+  <div class="head"><span class="snum">08</span><span class="stitle">Cronograma de Impacto</span></div>
+  <div class="body">
+    <p class="intro">Título "Cronograma de Impacto Sistêmico" já aparece. A linha do tempo se preenche de verde a cada clique.</p>
+    <div class="line"><div class="fala">"Pra organizar tudo isso, montamos um cronograma de impacto em quatro fases."</div></div>
+    <div class="line"><span class="click"><span class="arrow">›</span></span><div class="fala">"<b>Fase 1, Ativação:</b> contratação de engenharia local e início da atração de capital semente na região."</div></div>
+    <div class="line"><span class="click"><span class="arrow">›</span></span><div class="fala">"<b>Fase 2, Substituição:</b> começamos a substituir os apps de finanças estrangeiros em Natal e na Grande Natal."</div></div>
+    <div class="line"><span class="click"><span class="arrow">›</span></span><div class="fala">"<b>Fase 3, Escala:</b> expansão pro resto do Nordeste, ampliando a base de impostos que fica no RN."</div></div>
+    <div class="line"><span class="click"><span class="arrow">›</span></span><div class="fala">"<b>Fase 4, Exportação:</b> a FinUP entra no mercado internacional e começa a atrair divisas de fora."</div></div>
+    <p class="turn">clique › vira pro Slide 9</p>
+  </div>
+</div>
+
+<!-- SLIDE 9 -->
+<div class="slide">
+  <div class="head"><span class="snum">09</span><span class="stitle">Síntese de Impacto</span></div>
+  <div class="body">
+    <p class="intro">Título "Por que a FinUP importa para o RN e o Brasil" já aparece.</p>
+    <div class="line"><div class="fala">"Pra fechar, resumindo o impacto da FinUP em três palavras:"</div></div>
+    <div class="line"><span class="click"><span class="arrow">›</span></span><div class="fala">"<b>Gera valor</b> — atuando no setor de serviços, que é 72% do PIB do estado, e na economia criativa."</div></div>
+    <div class="line"><span class="click"><span class="arrow">›</span></span><div class="fala">"<b>Gera emprego</b> — qualificado e em cadeia, fixando talento aqui no Rio Grande do Norte."</div></div>
+    <div class="line"><span class="click"><span class="arrow">›</span></span><div class="fala">"<b>Retém divisas</b> — substituindo serviços estrangeiros e abrindo caminho pra exportação."</div></div>
+    <div class="line"><span class="click"><span class="arrow">›</span></span><div class="fala">"No fim, a FinUP é tecnologia, educação e gestão financeira como motor de <b>desenvolvimento regional sustentável</b>."</div></div>
+    <p class="turn">clique › vira pro Slide 10</p>
+  </div>
+</div>
+
+<!-- SLIDE 10 -->
+<div class="slide">
+  <div class="head"><span class="snum">10</span><span class="stitle">Referências</span></div>
+  <div class="body">
+    <p class="intro">Título "Referências" já aparece.</p>
+    <div class="line"><span class="click"><span class="arrow">›</span></span><div class="fala">"Todos os dados têm fonte oficial: IBGE, Banco Central, Serasa, CNC, OCDE, FIRJAN, Brasscom, IPEA, Distrito, FAPERN e ABES."</div></div>
+    <div class="line"><span class="click"><span class="arrow">›</span></span><div class="fala">"São <b>12 fontes oficiais mais a nossa pesquisa de campo</b> — acima do mínimo exigido pela Etapa 3. Muito obrigado!"</div></div>
+    <p class="turn">fim — pode dar fade ou voltar pra capa com a tecla Home</p>
+  </div>
+</div>
+
+<!-- ========== DICAS ========== -->
+<div class="tips">
+  <h2>💡 Dicas pra gravação ficar profissional</h2>
+  <ul>
+    <li><b>Tela cheia</b> (F) + <b>esconder interface</b> (H ou o olhinho 👁) — fica só o conteúdo.</li>
+    <li>Grave com <b>OBS</b> ou a gravação de tela do PC/celular.</li>
+    <li>Quem clica pode ser <b>uma pessoa só</b> (o "operador") enquanto se narra — ninguém mexe no teclado na hora de falar.</li>
+    <li>Se errar a fala, <b>espere 2 segundos parado</b> e repita a frase — facilita o corte na edição.</li>
+    <li>Os <b>números sobem animados</b> ao entrar em foco; deixe meio-segundo antes de falar o número.</li>
+  </ul>
+</div>
+
+<p class="footer">FinUP · Etapa 3 — Roteiro de Apresentação · GECTI · UFRN · 2026</p>
+
+</body>
+</html>
