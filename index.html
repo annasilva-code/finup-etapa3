@@ -202,8 +202,9 @@ kbd{background:rgba(255,255,255,.06);border:1px solid var(--line-strong);border-
   position:fixed;bottom:24px;right:30px;z-index:70;
   width:42px;height:42px;border-radius:50%;border:1px solid var(--line-strong);
   background:rgba(14,22,38,.6);backdrop-filter:blur(12px);color:var(--ink-soft);
-  font-size:1.05rem;cursor:pointer;display:grid;place-items:center;transition:.25s;
+  cursor:pointer;display:grid;place-items:center;transition:.25s;
 }
+#eye svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 #eye:hover{border-color:var(--green);color:var(--green);transform:translateY(-2px)}
 /* modo limpo: some tudo em volta, e o próprio olho fica quase invisível (some no hover) */
 body.clean .nav,
@@ -531,7 +532,7 @@ body.clean #eye:hover{opacity:1}
   <button id="next" class="nav-arrow" title="Avançar (→ ou espaço)">›</button>
 </div>
 <div class="hint">use <kbd>→</kbd> para focar/avançar &nbsp;·&nbsp; <kbd>F</kbd> tela cheia &nbsp;·&nbsp; <kbd>H</kbd> esconder</div>
-<button id="eye" title="Esconder/mostrar interface (H)">👁</button>
+<button id="eye" title="Esconder/mostrar interface (H)"><svg viewBox="0 0 24 24"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/><circle cx="12" cy="12" r="3"/></svg></button>
 
 <script>
 (function(){
