@@ -293,6 +293,10 @@ body.clean #eye:hover{opacity:1}
   .tl-fill{width:100%!important}
   .tl-dot{background:var(--green)!important;box-shadow:0 0 18px rgba(52,211,153,.7)!important}
   tbody tr.is-active{background:transparent!important}
+  /* gradiente recortado em texto não sobrevive no PDF -> usa verde sólido */
+  .grad{background:none!important;-webkit-background-clip:border-box!important;background-clip:border-box!important;color:var(--green)!important;-webkit-text-fill-color:var(--green)!important}
+  /* sombras/glow viram quadrados no PDF -> remove */
+  *{box-shadow:none!important}
   .nav,.hud-tr,.hint,.brand-tag,.progress,#eye{display:none!important}
 }
 </style>
