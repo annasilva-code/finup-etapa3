@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8" />
-<title>Roteiro — FinUP Etapa 3</title>
+<title>Roteiro — FinUP Etapa 4</title>
 <style>
 @page{size:A4;margin:14mm 14mm 16mm}
 *{margin:0;padding:0;box-sizing:border-box}
@@ -40,18 +40,11 @@ h2.section{font-size:11pt;color:var(--navy);text-transform:uppercase;letter-spac
 .slide .head .snum{font-size:15pt;font-weight:800;opacity:.85}
 .slide .head .stitle{font-size:11.5pt;font-weight:700;flex:1}
 .slide .body{padding:14px 18px}
-.intro{font-size:9.3pt;color:var(--dim);font-style:italic;margin-bottom:10px}
-
-/* fala + clique */
-.line{display:flex;gap:10px;margin-bottom:9px;align-items:flex-start}
-.line .cue{flex:0 0 auto;margin-top:1px}
-.fala{background:#f7f9fc;border-radius:8px;padding:9px 13px;font-size:10pt;line-height:1.5;flex:1;border-left:3px solid var(--line)}
+.fala{background:#f7f9fc;border-radius:8px;padding:11px 14px;font-size:10pt;line-height:1.55;border-left:3px solid var(--green)}
 .fala b{color:var(--navy)}
+.turn{margin-top:10px;font-size:9pt;color:var(--green);font-weight:700;display:flex;align-items:center;gap:8px}
 .click{display:inline-flex;align-items:center;gap:4px;background:var(--green);color:#fff;font-weight:700;font-size:8.5pt;padding:5px 11px;border-radius:999px;white-space:nowrap}
 .click .arrow{font-size:11pt;line-height:1}
-.note{font-size:8.7pt;color:var(--dim);margin:2px 0 8px 30px;font-style:italic}
-.turn{margin-top:6px;font-size:9pt;color:var(--green);font-weight:700;display:flex;align-items:center;gap:6px}
-.turn::before{content:"⟶";font-size:11pt}
 
 .tips{background:var(--navy);color:#dbe3ef;border-radius:12px;padding:16px 20px;margin-top:8px;page-break-inside:avoid}
 .tips h2{color:#34d399;font-size:11.5pt;margin-bottom:9px}
@@ -66,9 +59,9 @@ h2.section{font-size:11pt;color:var(--navy);text-transform:uppercase;letter-spac
 <!-- ========== CAPA ========== -->
 <section class="cover">
   <div class="tag">Roteiro de Apresentação · Vídeo</div>
-  <h1>FinUP — Etapa 3<br/><span class="g">Impactos Macroeconômicos</span><br/>e Desenvolvimento Local</h1>
+  <h1>FinUP — Etapa 4<br/><span class="g">Complexidade Econômica</span><br/>e Impacto Social · Cidades MIL</h1>
   <div class="rule"></div>
-  <p>Guia de narração: o que falar e quando clicar a seta — sincronizado com a apresentação animada.</p>
+  <p>Guia de narração: o que falar em cada slide e quando clicar a seta — sincronizado com a apresentação.</p>
   <div class="meta">Anna Beatriz Neres · Bianca Lauanny Neres · Flávio Ambiplay de Assis Jr.<br/>Gustavo Martinelly de Lima · Samuel Silva de Lima<br/>GECTI · UFRN · 2026</div>
   <div class="badge">⏱ Duração estimada: 6 a 7 minutos · 10 slides</div>
 </section>
@@ -78,10 +71,10 @@ h2.section{font-size:11pt;color:var(--navy);text-transform:uppercase;letter-spac
   <h2>🎬 Como funciona a máquina</h2>
   <ul>
     <li>Abra <b>index.html</b> no navegador e aperte <b>F</b> (tela cheia) e <b>H</b> (esconde a interface pra gravar limpo).</li>
-    <li>Cada clique na seta <b>›</b> (ou tecla <b>→</b>) dá <b>zoom/foco no próximo item</b> — igual edição de vídeo. O resto escurece.</li>
-    <li>Quando os itens do slide acabam, o próximo <b>›</b> vira de slide sozinho. A seta <b>‹</b> (ou ←) volta.</li>
+    <li>Agora a apresentação avança <b>slide a slide</b>: cada clique na seta <b>›</b> (ou tecla <b>→</b>) já mostra o <b>slide inteiro de uma vez</b> — sem revelar quadrado por quadrado.</li>
+    <li>A seta <b>‹</b> (ou tecla <b>←</b>) volta um slide.</li>
   </ul>
-  <div class="gold"><b>Regra de ouro:</b> só clique <b>›</b> DEPOIS de terminar a frase. Falou → clicou → o próximo item entra em foco → continua falando. Assim o vídeo fica sincronizado.</div>
+  <div class="gold"><b>Regra de ouro:</b> leia todo o texto do slide enquanto ele está na tela e só clique <b>›</b> quando terminar a fala daquele slide. Assim a narração fica sincronizada com a imagem.</div>
 </div>
 
 <h2 class="section">🎞️ Roteiro slide a slide</h2>
@@ -90,131 +83,80 @@ h2.section{font-size:11pt;color:var(--navy);text-transform:uppercase;letter-spac
 <div class="slide">
   <div class="head"><span class="snum">01</span><span class="stitle">Capa</span></div>
   <div class="body">
-    <p class="intro">A logo e o título já aparecem ao abrir. Comece falando.</p>
-    <div class="line"><div class="fala">"Olá! Somos o grupo da <b>FinUP</b>, e hoje vamos apresentar a Etapa 3 do nosso projeto: os <b>impactos macroeconômicos e o desenvolvimento local</b> que a nossa solução pode gerar."</div></div>
-    <div class="line"><span class="click"><span class="arrow">›</span></span><div class="fala">"Esse é um estudo de viabilidade econômica do nosso negócio."</div></div>
-    <p class="note">entra o selo "Estudo de Viabilidade Econômica"</p>
-    <div class="line"><span class="click"><span class="arrow">›</span></span><div class="fala">"O título resume nossa tese: a FinUP como ferramenta de <b>desenvolvimento regional e sustentabilidade macroeconômica</b>."</div></div>
-    <div class="line"><span class="click"><span class="arrow">›</span><span class="arrow">›</span></span><div class="fala">"Vamos analisar três frentes: geração de valor pro PIB, o mercado de trabalho potiguar e a retenção de divisas no país."</div></div>
-    <div class="line"><span class="click"><span class="arrow">›</span></span><div class="fala">"Esse trabalho é da nossa equipe, da disciplina de GECTI, na UFRN."</div></div>
-    <p class="turn">clique › vira pro Slide 2</p>
+    <div class="fala">"Olá! Esta é a <b>Etapa 4</b> do nosso estudo sobre a <b>FinUP</b>. Se antes falamos do mercado e do impacto macroeconômico, agora a gente fecha o ciclo conectando três coisas: <b>sofisticação produtiva, identidade local e pautas sociais</b>. Ou seja: como uma fintech feita por jovens do Rio Grande do Norte deixa a economia mais sofisticada, combate a desinformação e ainda protege a juventude."</div>
+    <div class="turn"><span class="click"><span class="arrow">›</span> clique para avançar</span></div>
   </div>
 </div>
 
 <!-- SLIDE 2 -->
 <div class="slide">
-  <div class="head"><span class="snum">02</span><span class="stitle">O Cenário</span></div>
+  <div class="head"><span class="snum">02</span><span class="stitle">O fio condutor</span></div>
   <div class="body">
-    <p class="intro">O título "O Brasil que não controla o próprio dinheiro" já aparece.</p>
-    <div class="line"><div class="fala">"Antes de falar do impacto da FinUP, é importante entender o problema. O Brasil vive uma crise de saúde financeira."</div></div>
-    <div class="line"><span class="click"><span class="arrow">›</span></span><div class="fala">"Hoje são <b>81,7 milhões de brasileiros inadimplentes</b> — recorde histórico. Quase metade dos adultos do país, segundo a Serasa."</div></div>
-    <div class="line"><span class="click"><span class="arrow">›</span></span><div class="fala">"E <b>80,2% das famílias estão endividadas</b> — o maior nível já registrado desde 2010, segundo a CNC."</div></div>
-    <div class="line"><span class="click"><span class="arrow">›</span></span><div class="fala">"O mais grave: <b>47% dos jovens da Geração Z não controlam as próprias finanças</b>, e só 9% usam aplicativo pra isso."</div></div>
-    <div class="line"><span class="click"><span class="arrow">›</span></span><div class="fala">"No exame de educação financeira da OCDE, o Brasil tirou só 416 pontos, contra 498 da média. É nesse vácuo que a FinUP entra."</div></div>
-    <p class="turn">clique › vira pro Slide 3</p>
+    <div class="fala">"Toda a Etapa 4 gira em torno de <b>três perguntas</b>. A primeira, de <b>Complexidade Econômica</b>: como um negócio digital ajuda o RN e o Brasil a desenvolver novas capacidades e a saltar para setores mais sofisticados? A segunda, das <b>Cidades MIL</b>: de que forma a FinUP combate a desinformação dentro do seu nicho, que são as finanças? E a terceira, a <b>pauta da UNICEF</b>: como o negócio impacta positivamente jovens e crianças — educação, segurança digital e renda ética? Vamos responder uma por uma."</div>
+    <div class="turn"><span class="click"><span class="arrow">›</span> clique para avançar</span></div>
   </div>
 </div>
 
 <!-- SLIDE 3 -->
 <div class="slide">
-  <div class="head"><span class="snum">03</span><span class="stitle">Nossa Pesquisa de Campo</span></div>
+  <div class="head"><span class="snum">03</span><span class="stitle">4.1 · Complexidade Econômica (diagnóstico)</span></div>
   <div class="body">
-    <p class="intro">Título "Validação de Mercado" já aparece.</p>
-    <div class="line"><div class="fala">"Esses são dados nacionais. Mas a gente quis ouvir o nosso público direto."</div></div>
-    <div class="line"><span class="click"><span class="arrow">›</span></span><div class="fala">"Aplicamos uma pesquisa com <b>75 jovens</b> — 88% do Rio Grande do Norte, a maioria entre 18 e 24 anos. E o problema se confirma na prática:"</div></div>
-    <div class="line"><span class="click"><span class="arrow">›</span></span><div class="fala">"<b>76% já ficaram sem dinheiro antes do fim do mês.</b>"</div></div>
-    <div class="line"><span class="click"><span class="arrow">›</span></span><div class="fala">"<b>70,7% não usam nenhum aplicativo financeiro</b> hoje — ou seja, é um mercado em aberto."</div></div>
-    <div class="line"><span class="click"><span class="arrow">›</span></span><div class="fala">"E o melhor: <b>92% usariam a FinUP</b> — somando 'sim' e 'talvez'."</div></div>
-    <div class="line"><span class="click"><span class="arrow">›</span></span><div class="fala">"A disposição a pagar valida um <b>ticket-médio em torno de R$ 7,50</b>, que é o preço que projetamos."</div></div>
-    <div class="line"><span class="click"><span class="arrow">›</span></span><div class="fala">"Tudo isso é dado primário, da nossa pesquisa de campo."</div></div>
-    <p class="turn">clique › vira pro Slide 4</p>
+    <div class="fala">"Começando pela primeira. <b>Complexidade econômica</b> é um conceito de Hausmann e Hidalgo, de Harvard: mede o <b>conhecimento</b> que uma sociedade acumula e expressa nos produtos que consegue fabricar. Quanto mais diversa e sofisticada a produção, mais rica e resiliente a economia. E o problema é que o Brasil está <b>andando para trás</b>: caímos para a <b>56ª posição</b> no índice mundial, 13 lugares em uma década. <b>65%</b> das exportações já são commodities — a reprimarização. E o RN é caso extremo: <b>60,6%</b> do PIB industrial vem só do petróleo. Vendemos matéria-prima — sal, fruta, camarão — e compramos industrializado."</div>
+    <div class="turn"><span class="click"><span class="arrow">›</span> clique para avançar</span></div>
   </div>
 </div>
 
 <!-- SLIDE 4 -->
 <div class="slide">
-  <div class="head"><span class="snum">04</span><span class="stitle">3.1 · PIB e Valor Agregado</span></div>
+  <div class="head"><span class="snum">04</span><span class="stitle">4.1 · Subindo a escada da complexidade</span></div>
   <div class="body">
-    <p class="intro">Título "3.1 · PIB e Valor Agregado Potiguar" já aparece.</p>
-    <div class="line"><div class="fala">"Vamos ao primeiro item da Etapa 3: como a FinUP contribui pro PIB."</div></div>
-    <div class="line"><span class="click"><span class="arrow">›</span></span><div class="fala">"O PIB do Rio Grande do Norte passou de <b>R$ 101 bilhões</b> pela primeira vez, segundo o IBGE — quase 1% do PIB do Brasil."</div></div>
-    <div class="line"><span class="click"><span class="arrow">›</span></span><div class="fala">"E olha que importante: <b>72% desse PIB vêm do setor de serviços</b> — exatamente onde a FinUP atua."</div></div>
-    <div class="line"><span class="click"><span class="arrow">›</span></span><div class="fala">"Além disso, a economia criativa já é <b>3,59% do PIB nacional</b>, e a FinUP, sendo tecnologia e conhecimento, se encaixa nesse setor."</div></div>
-    <div class="line"><span class="click"><span class="arrow">›</span></span><div class="fala">"Na contribuição direta: o Brasil tem mais de 1.700 fintechs e lidera a América Latina. A FinUP moderniza o setor de serviços do RN e captura valor das transações locais."</div></div>
-    <div class="line"><span class="click"><span class="arrow">›</span></span><div class="fala">"E tem o efeito multiplicador: ao reduzir os juros de mora que os jovens pagam, esse dinheiro volta a circular no comércio local."</div></div>
-    <p class="turn">clique › vira pro Slide 5</p>
+    <div class="fala">"E como a FinUP entra nisso? A teoria diz que economias crescem <b>acumulando capacidades</b> e migrando para atividades vizinhas mais sofisticadas. E <b>software e IA estão no topo dessa escada</b> — conhecimento puro, que fica nas pessoas. Para construir a FinUP, o RN forma <b>devs, engenheiros de IA e cientistas de dados</b>: capacidade produtiva nova, que se reaproveita em outros setores. A demanda existe — o Brasil tem déficit de <b>530 mil profissionais de tecnologia</b>. E o setor de TIC já é <b>6,5% do PIB</b>, R$ 762 bilhões: alta complexidade, onde a FinUP coloca o RN."</div>
+    <div class="turn"><span class="click"><span class="arrow">›</span> clique para avançar</span></div>
   </div>
 </div>
 
 <!-- SLIDE 5 -->
 <div class="slide">
-  <div class="head"><span class="snum">05</span><span class="stitle">Projeções Macroeconômicas</span></div>
+  <div class="head"><span class="snum">05</span><span class="stitle">4.2 · Cidades MIL e desinformação</span></div>
   <div class="body">
-    <p class="intro">Título "Projeções Macroeconômicas" já aparece. A tabela revela uma linha por clique.</p>
-    <div class="line"><div class="fala">"Aqui estão nossas projeções pros três primeiros anos, num cenário conservador."</div></div>
-    <div class="line"><span class="click"><span class="arrow">›</span></span><div class="fala">"Dividimos em três fases: foco local, foco regional e consolidação."</div></div>
-    <div class="line"><span class="click"><span class="arrow">›</span></span><div class="fala">"O <b>faturamento</b> estimado vai de R$ 450 mil no primeiro ano pra R$ 3,1 milhões no terceiro."</div></div>
-    <div class="line"><span class="click"><span class="arrow">›</span></span><div class="fala">"Isso gera <b>retenção tributária</b> local, em ISS e ICMS, chegando a R$ 155 mil — dinheiro que fica no estado."</div></div>
-    <div class="line"><span class="click"><span class="arrow">›</span></span><div class="fala">"Em <b>empregos diretos e indiretos</b>, saímos de 12 e chegamos a 85 postos."</div></div>
-    <div class="line"><span class="click"><span class="arrow">›</span></span><div class="fala">"E projetamos atrair até <b>R$ 1 milhão de capital externo de fomento</b> pro Rio Grande do Norte."</div></div>
-    <div class="line"><span class="click"><span class="arrow">›</span></span><div class="fala">"São projeções ancoradas em programas reais de fomento."</div></div>
-    <p class="turn">clique › vira pro Slide 6</p>
+    <div class="fala">"Segunda pergunta: as <b>Cidades MIL</b>. MIL é <b>Mídia e Informação</b> — competências que a UNESCO chama de <b>'a primeira linha de defesa contra a desinformação'</b>: formar pessoas críticas diante do que leem e compartilham. E olha que interessante: <b>São Gonçalo do Amarante</b>, aqui no RN, foi uma das <b>10 cidades-piloto</b> do programa Cidades MIL da UNESCO, em 2025. O problema é grande: <b>85%</b> das pessoas se preocupam com a desinformação online e cerca de <b>90% dos brasileiros</b> já acreditaram em conteúdo falso. E a desinformação também é <b>financeira</b> — é nesse nicho que a FinUP atua."</div>
+    <div class="turn"><span class="click"><span class="arrow">›</span> clique para avançar</span></div>
   </div>
 </div>
 
 <!-- SLIDE 6 -->
 <div class="slide">
-  <div class="head"><span class="snum">06</span><span class="stitle">3.2 · Investimentos e Emprego</span></div>
+  <div class="head"><span class="snum">06</span><span class="stitle">4.2 · A IA da FinUP contra a desinformação financeira</span></div>
   <div class="body">
-    <p class="intro">Título "3.2 · Investimentos e Geração de Emprego" já aparece.</p>
-    <div class="line"><div class="fala">"Esse é o segundo ponto da Etapa 3: emprego e investimento."</div></div>
-    <div class="line"><span class="click"><span class="arrow">›</span></span><div class="fala">"Primeiro, os <b>empregos diretos</b>: como o diferencial da FinUP é a inteligência artificial, a empresa precisa contratar devs, engenheiros de IA e cientistas de dados, além de conteúdo e suporte — absorvendo talentos da UFRN e do IFRN. O salário médio de um dev pleno é quase R$ 8 mil."</div></div>
-    <div class="line"><span class="click"><span class="arrow">›</span></span><div class="fala">"Segundo, a <b>cadeia indireta</b>: segundo o IPEA, cada emprego em alta tecnologia gera até <b>6,9 empregos</b> em serviços locais."</div></div>
-    <div class="line"><span class="click"><span class="arrow">›</span></span><div class="fala">"Terceiro, <b>atração de capital</b>: existem programas reais aqui, como o Centelha do RN e o FIP Nordeste, um fundo de R$ 150 milhões que cita fintech explicitamente."</div></div>
-    <div class="line"><span class="click"><span class="arrow">›</span></span><div class="fala">"E uma oportunidade enorme: o Nordeste tem <b>25% das startups do Brasil</b>, mas recebe menos de 1% do investimento. A FinUP ajuda a virar esse jogo."</div></div>
-    <p class="turn">clique › vira pro Slide 7</p>
+    <div class="fala">"Os números do nicho: em 2024 os brasileiros perderam <b>R$ 10,1 bilhões</b> com golpes financeiros (+17%); só no PIX foram <b>R$ 6,5 bilhões</b> em fraudes. E quem ensina o jovem a lidar com dinheiro? <b>73% dos novos investidores</b> aprenderam com youtubers e influenciadores — terreno de 'renda fácil' e pirâmides. É aqui que a FinUP é um <b>instrumento de MIL</b>: o <b>assistente de IA</b> dá educação financeira imparcial e verificável, ajudando a reconhecer o golpe e o finfluencer irresponsável. Porque só <b>35% dos brasileiros</b> têm letramento financeiro — e menos letramento é mais vulnerabilidade."</div>
+    <div class="turn"><span class="click"><span class="arrow">›</span> clique para avançar</span></div>
   </div>
 </div>
 
 <!-- SLIDE 7 -->
 <div class="slide">
-  <div class="head"><span class="snum">07</span><span class="stitle">3.3 · Retenção de Divisas</span></div>
+  <div class="head"><span class="snum">07</span><span class="stitle">4.3 · Pauta UNICEF e Juventude</span></div>
   <div class="body">
-    <p class="intro">Título "3.3 · Soberania e Retenção de Divisas" já aparece.</p>
-    <div class="line"><div class="fala">"O terceiro ponto da Etapa 3 é o setor externo: como a FinUP impede que dinheiro saia do país."</div></div>
-    <div class="line"><span class="click"><span class="arrow">›</span></span><div class="fala">"O Brasil tem um déficit recorde de <b>US$ 52,9 bilhões</b> na balança de serviços — divisas saindo do país, segundo o Banco Central."</div></div>
-    <div class="line"><span class="click"><span class="arrow">›</span></span><div class="fala">"Só em <b>software, streaming e nuvem estrangeiros</b>, saíram quase <b>US$ 16 bilhões</b> num único ano."</div></div>
-    <div class="line"><span class="click"><span class="arrow">›</span></span><div class="fala">"Como o FinUP é uma empresa daqui do RN, o dinheiro que os jovens pagam pelo app e os dados deles ficam no Brasil — em vez de irem pra apps estrangeiros."</div></div>
-    <div class="line"><span class="click"><span class="arrow">›</span></span><div class="fala">"E olhando pra frente: o FinUP pode crescer pra fora — outros países da América do Sul e que falam português — trazendo dinheiro de fora pra cá."</div></div>
-    <p class="turn">clique › vira pro Slide 8</p>
+    <div class="fala">"Terceira pergunta: a <b>pauta da UNICEF</b>. A FinUP nasce alinhada às prioridades da UNICEF para a adolescência: <b>educação, habilidades para o futuro do trabalho e cidadania digital</b>. Veja: <b>1 em cada 3</b> usuários de internet no mundo é uma criança. No Brasil, <b>93% dos jovens de 9 a 17 anos</b> usam internet e <b>30%</b> já tiveram contato com estranhos online. A própria UNICEF tem o <b>Passport to Earning</b>, programa de habilidades digitais, financeiras e de empregabilidade para 15 a 24 anos — exatamente o que a FinUP entrega."</div>
+    <div class="turn"><span class="click"><span class="arrow">›</span> clique para avançar</span></div>
   </div>
 </div>
 
 <!-- SLIDE 8 -->
 <div class="slide">
-  <div class="head"><span class="snum">08</span><span class="stitle">Cronograma de Impacto</span></div>
+  <div class="head"><span class="snum">08</span><span class="stitle">4.3 · Educação, segurança digital e renda ética</span></div>
   <div class="body">
-    <p class="intro">Título "Cronograma de Impacto Sistêmico" já aparece. A linha do tempo se preenche de verde a cada clique.</p>
-    <div class="line"><div class="fala">"Pra organizar tudo isso, montamos um cronograma de impacto em quatro fases."</div></div>
-    <div class="line"><span class="click"><span class="arrow">›</span></span><div class="fala">"<b>Fase 1, Ativação:</b> contratação de engenharia local e início da atração de capital semente na região."</div></div>
-    <div class="line"><span class="click"><span class="arrow">›</span></span><div class="fala">"<b>Fase 2, Substituição:</b> começamos a substituir os apps de finanças estrangeiros em Natal e na Grande Natal."</div></div>
-    <div class="line"><span class="click"><span class="arrow">›</span></span><div class="fala">"<b>Fase 3, Escala:</b> expansão pro resto do Nordeste, ampliando a base de impostos que fica no RN."</div></div>
-    <div class="line"><span class="click"><span class="arrow">›</span></span><div class="fala">"<b>Fase 4, Exportação:</b> a FinUP entra no mercado internacional e começa a atrair divisas de fora."</div></div>
-    <p class="turn">clique › vira pro Slide 9</p>
+    <div class="fala">"Esse impacto vem em <b>três frentes</b>. <b>Educação</b>: no PISA 2022 o Brasil tirou só <b>416</b> em educação financeira e 45% dos jovens não atingem o nível básico — a FinUP ensina onde a escola não chega. <b>Segurança digital</b>: num ambiente cheio de golpe e 'renda fácil', a FinUP ensina o jovem a se proteger — letramento financeiro é cidadania digital. <b>Renda ética</b>: o rotativo do cartão chegou a <b>440% ao ano</b> e as renegociações da Geração Z cresceram <b>49%</b>; a FinUP orienta crédito consciente. E aqui no RN <b>quase 24% dos jovens</b> não estudam nem trabalham — a FinUP devolve ferramentas de autonomia."</div>
+    <div class="turn"><span class="click"><span class="arrow">›</span> clique para avançar</span></div>
   </div>
 </div>
 
 <!-- SLIDE 9 -->
 <div class="slide">
-  <div class="head"><span class="snum">09</span><span class="stitle">Síntese de Impacto</span></div>
+  <div class="head"><span class="snum">09</span><span class="stitle">Síntese</span></div>
   <div class="body">
-    <p class="intro">Título "Por que a FinUP importa para o RN e o Brasil" já aparece.</p>
-    <div class="line"><div class="fala">"Pra fechar, resumindo o impacto da FinUP em três palavras:"</div></div>
-    <div class="line"><span class="click"><span class="arrow">›</span></span><div class="fala">"<b>Gera valor</b> — atuando no setor de serviços, que é 72% do PIB do estado, e na economia criativa."</div></div>
-    <div class="line"><span class="click"><span class="arrow">›</span></span><div class="fala">"<b>Gera emprego</b> — como empresa de IA, contrata um time técnico e movimenta uma cadeia de conteúdo e marketing aqui no Rio Grande do Norte."</div></div>
-    <div class="line"><span class="click"><span class="arrow">›</span></span><div class="fala">"<b>Retém divisas</b> — o dinheiro e os dados dos usuários ficam no Brasil, e o app ainda pode crescer lá fora no futuro."</div></div>
-    <div class="line"><span class="click"><span class="arrow">›</span></span><div class="fala">"No fim, a FinUP é tecnologia, educação e gestão financeira como motor de <b>desenvolvimento regional sustentável</b>."</div></div>
-    <p class="turn">clique › vira pro Slide 10</p>
+    <div class="fala">"Juntando tudo, dá pra ver por que a Etapa 4 <b>fecha o ciclo</b>. A FinUP eleva a <b>sofisticação produtiva</b> do RN, formando capacidades de software e IA num estado dependente de commodities. Trabalha <b>identidade e informação</b>, combatendo a desinformação financeira como instrumento das Cidades MIL. E cumpre uma <b>pauta social</b>, protegendo e capacitando a juventude com educação, segurança digital e renda ética. No fim, é tecnologia de alta complexidade a serviço de uma juventude mais <b>informada, segura e financeiramente livre</b>."</div>
+    <div class="turn"><span class="click"><span class="arrow">›</span> clique para avançar</span></div>
   </div>
 </div>
 
@@ -222,26 +164,23 @@ h2.section{font-size:11pt;color:var(--navy);text-transform:uppercase;letter-spac
 <div class="slide">
   <div class="head"><span class="snum">10</span><span class="stitle">Referências</span></div>
   <div class="body">
-    <p class="intro">Título "Referências" já aparece.</p>
-    <div class="line"><span class="click"><span class="arrow">›</span></span><div class="fala">"Todos os dados têm fonte oficial: IBGE, Banco Central, Serasa, CNC, OCDE, FIRJAN, Brasscom, IPEA, Distrito, FAPERN e ABES."</div></div>
-    <div class="line"><span class="click"><span class="arrow">›</span></span><div class="fala">"São <b>12 fontes oficiais mais a nossa pesquisa de campo</b> — acima do mínimo exigido pela Etapa 3. Muito obrigado!"</div></div>
-    <p class="turn">fim — pode dar fade ou voltar pra capa com a tecla Home</p>
+    <div class="fala">"Por fim, as fontes. A Etapa 4 pedia de 5 a 7 referências — e trouxemos <b>12 fontes oficiais</b>: do Atlas de Complexidade Econômica de Harvard à UNESCO, Febraban, Banco Central, UNICEF, IBGE, OCDE e Serasa. Tudo verificado, para garantir que cada número é real. Era isso — obrigado(a)!"</div>
   </div>
 </div>
 
-<!-- ========== DICAS ========== -->
+<!-- DICAS -->
 <div class="tips">
-  <h2>💡 Dicas pra gravação ficar profissional</h2>
+  <h2>🎤 Dicas para gravar o vídeo</h2>
   <ul>
-    <li><b>Tela cheia</b> (F) + <b>esconder interface</b> (H ou o olhinho 👁) — fica só o conteúdo.</li>
-    <li>Grave com <b>OBS</b> ou a gravação de tela do PC/celular.</li>
-    <li>Quem clica pode ser <b>uma pessoa só</b> (o "operador") enquanto se narra — ninguém mexe no teclado na hora de falar.</li>
-    <li>Se errar a fala, <b>espere 2 segundos parado</b> e repita a frase — facilita o corte na edição.</li>
-    <li>Os <b>números sobem animados</b> ao entrar em foco; deixe meio-segundo antes de falar o número.</li>
+    <li>Antes de gravar: aperte <b>H</b> para esconder setas, barra e contador — a tela fica limpa pro vídeo.</li>
+    <li>Fale em ritmo calmo; cada slide rende de <b>30 a 45 segundos</b> de narração.</li>
+    <li>Como tudo aparece de uma vez, dá pra <b>passar o olho</b> no slide inteiro e narrar de cima para baixo.</li>
+    <li>Use <b>F</b> para tela cheia e grave a tela (OBS, Loom ou a gravação nativa do sistema).</li>
+    <li>Se errar a fala, é só voltar com <b>‹</b> e regravar aquele slide — depois corta na edição.</li>
   </ul>
 </div>
 
-<p class="footer">FinUP · Etapa 3 — Roteiro de Apresentação · GECTI · UFRN · 2026</p>
+<div class="footer">FinUP · Etapa 4 — Complexidade Econômica e Impacto Social (Cidades MIL) · GECTI · UFRN · 2026</div>
 
 </body>
 </html>

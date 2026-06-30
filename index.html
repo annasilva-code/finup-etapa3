@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>FinUP — Impacto Macroeconômico e Desenvolvimento Local</title>
+<title>FinUP — Complexidade Econômica e Impacto Social · Etapa 4</title>
 <style>
 /* ============================================================
-   FinUP — Etapa 3 · Impactos Macroeconômicos e Desenvolvimento Local
-   Máquina de apresentação (estilo vídeo editado, foco/zoom por etapa)
+   FinUP — Etapa 4 · Complexidade Econômica e Impacto Cidades MIL
+   Máquina de apresentação (slide a slide, revela tudo de uma vez)
    ============================================================ */
 
 :root{
@@ -63,34 +63,19 @@ html,body{height:100%;overflow:hidden;background:var(--bg);font-family:var(--fon
   display:flex;flex-direction:column;justify-content:center;
   padding:7vh 8vw;
 }
-.slide-inner{
-  transition:transform .9s cubic-bezier(.76,0,.24,1), filter .6s ease;
-  transform-origin:center center;
-  width:100%;
-}
-/* leve "respiro" cinematográfico no slide ativo */
-.slide.active .slide-inner{animation:breathe 18s ease-in-out infinite alternate}
-@keyframes breathe{from{transform:scale(1)}to{transform:scale(1.012)}}
+.slide-inner{width:100%}
 
 /* ============================================================
-   SISTEMA DE FOCO/ZOOM POR ETAPA (estilo vídeo editado)
-   .step = elemento revelado por clique. Estados:
-   - não lido  -> invisível / deslocado
-   - .is-read  -> visível porém esmaecido (já narrado)
-   - .is-active-> em foco: nítido, escala maior, glow
+   REVELAÇÃO POR SLIDE (sem quadrado-por-quadrado)
+   Cada .step entra junto quando o slide fica .active — uma
+   leve cascata cinematográfica, mas tudo aparece de uma vez.
    ============================================================ */
 .step{
-  opacity:0;transform:translateY(24px) scale(.98);
-  filter:blur(4px);
-  transition:opacity .6s ease, transform .7s cubic-bezier(.2,.7,.2,1), filter .6s ease;
+  opacity:0;transform:translateY(22px);filter:blur(3px);
+  transition:opacity .7s ease, transform .8s cubic-bezier(.2,.7,.2,1), filter .7s ease;
   will-change:opacity,transform,filter;
 }
-/* itens já lidos esmaecem só um pouco (escurecimento suave) */
-.step.is-read{opacity:.72;transform:translateY(0) scale(1);filter:blur(0)}
-.step.is-active{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}
-.focus-group.has-active .step.is-read{opacity:.72}
-/* o foco principal é o aumento de tamanho do item ativo */
-.card.is-active{transform:translateY(-4px) scale(1.05)!important}
+.slide.active .step{opacity:1;transform:none;filter:none}
 
 /* ---------- tipografia base ---------- */
 .kicker{
@@ -102,13 +87,15 @@ html,body{height:100%;overflow:hidden;background:var(--bg);font-family:var(--fon
 h1{font-size:clamp(2.4rem,5.4vw,5rem);font-weight:800;line-height:1.04;letter-spacing:-.02em;overflow-wrap:break-word}
 h2{font-size:clamp(1.7rem,3.4vw,3rem);font-weight:800;line-height:1.08;letter-spacing:-.015em}
 .grad{background:linear-gradient(100deg,var(--green) 0%,var(--green-2) 60%,#7ef0d0 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
-p.lead{font-size:clamp(1rem,1.5vw,1.35rem);color:var(--ink-soft);line-height:1.6;max-width:60ch}
+p.lead{font-size:clamp(1rem,1.5vw,1.35rem);color:var(--ink-soft);line-height:1.6;max-width:64ch}
 .sub{color:var(--ink-dim);font-size:.95rem}
+.hl{color:var(--green);font-weight:700}
 
-/* barra-título lateral (igual referência) */
-.slide-title{display:flex;align-items:center;gap:1rem;margin-bottom:clamp(2rem,5vh,4rem)}
+/* barra-título lateral */
+.slide-title{display:flex;align-items:center;gap:1rem;margin-bottom:clamp(1.4rem,3.5vh,2.6rem)}
 .slide-title::before{content:"";width:6px;height:1.5em;border-radius:4px;background:linear-gradient(var(--green),var(--green-2))}
 .slide-title h2{margin:0}
+.eyebrow{font-size:.72rem;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:var(--green);margin-bottom:.5rem}
 
 /* ---------- cards ---------- */
 .grid{display:grid;gap:clamp(1rem,2vw,1.8rem)}
@@ -118,61 +105,37 @@ p.lead{font-size:clamp(1rem,1.5vw,1.35rem);color:var(--ink-soft);line-height:1.6
   background:linear-gradient(180deg,var(--panel) 0%,var(--bg-2) 100%);
   border:1px solid var(--line-strong);border-radius:var(--radius);
   padding:clamp(1.4rem,2.4vw,2.2rem);
-  transition:box-shadow .6s ease,border-color .6s ease,transform .6s cubic-bezier(.2,.7,.2,1);
 }
+.card.feat{border-color:rgba(52,211,153,.45);background:linear-gradient(180deg,rgba(52,211,153,.10),var(--bg-2))}
 .card .ico{
   width:52px;height:52px;border-radius:14px;display:grid;place-items:center;margin-bottom:1.1rem;
   background:rgba(52,211,153,.10);border:1px solid rgba(52,211,153,.25);color:var(--green);
 }
 .ico svg{width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.card h3{font-size:clamp(1.1rem,1.7vw,1.5rem);font-weight:700;margin-bottom:.7rem;color:#fff}
-.card p{color:var(--ink-soft);font-size:clamp(.92rem,1.1vw,1.05rem);line-height:1.55}
-.card .src{display:block;margin-top:.9rem;font-size:.78rem;color:var(--ink-dim)}
+.card h3{font-size:clamp(1.05rem,1.6vw,1.4rem);font-weight:700;margin-bottom:.6rem;color:#fff}
+.card .tag{font-size:.7rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--green);display:block;margin-bottom:.5rem}
+.card p{color:var(--ink-soft);font-size:clamp(.9rem,1.05vw,1.02rem);line-height:1.55}
+.card p b{color:#fff}
 
 /* ---------- números/estatística ---------- */
-.stat .num{font-size:clamp(2.2rem,4.6vw,4rem);font-weight:800;line-height:1;letter-spacing:-.02em}
-.stat .lbl{margin-top:.6rem;color:var(--ink-soft);font-size:clamp(.85rem,1.1vw,1.05rem);line-height:1.45}
-.stat .src{font-size:.74rem;color:var(--ink-dim);margin-top:.55rem}
-/* fontes por card removidas — ficam só no slide final de Referências */
-.src{display:none!important}
+.stat .num{font-size:clamp(2.1rem,4.4vw,3.7rem);font-weight:800;line-height:1;letter-spacing:-.02em}
+.stat .lbl{margin-top:.6rem;color:var(--ink-soft);font-size:clamp(.84rem,1.05vw,1rem);line-height:1.45}
+.stat .lbl b{color:#fff}
 
-/* ---------- tabela de projeções ---------- */
-table{width:100%;border-collapse:collapse;font-size:clamp(.85rem,1.15vw,1.1rem)}
-thead th{text-align:left;padding:1rem 1.2rem;color:var(--ink-soft);font-weight:600;border-bottom:1px solid var(--line-strong)}
-thead th:first-child{color:#fff}
-tbody td{padding:1.05rem 1.2rem;border-bottom:1px solid var(--line)}
-tbody td:first-child{font-weight:700;color:#fff}
-tbody tr td.hl{color:var(--green);font-weight:700}
-tbody tr{transition:background .5s ease}
-tbody tr.is-active{background:rgba(52,211,153,.07)}
-
-/* ---------- timeline (cronograma) ---------- */
-.timeline{position:relative;margin-top:1rem;height:46vh;min-height:340px;display:flex;align-items:center}
-.tl-line{position:absolute;top:50%;left:0;right:0;height:2px;background:var(--line-strong);z-index:0}
-.tl-fill{position:absolute;top:50%;left:0;height:2px;width:0;background:linear-gradient(90deg,var(--green),var(--green-2));transition:width 1s ease;box-shadow:0 0 12px rgba(52,211,153,.6);z-index:1}
-.tl-row{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;z-index:2;width:100%;height:100%}
-.tl-item{text-align:center;padding:0 .5rem;display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%}
-.tl-dot{width:20px;height:20px;border-radius:50%;border:2px solid var(--green);background:var(--bg);flex:0 0 auto;position:relative;transition:.5s;z-index:3}
-.step.is-active .tl-dot,.step.is-read .tl-dot{background:var(--green);box-shadow:0 0 18px rgba(52,211,153,.7)}
-.tl-item h4{color:var(--green);font-size:clamp(.95rem,1.3vw,1.2rem);margin:0 0 .4rem}
-.tl-item p{color:var(--ink-soft);font-size:clamp(.8rem,1vw,.95rem);line-height:1.4}
-.tl-up{flex:1;display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:28px;margin:0}
-.tl-down{flex:1;display:flex;flex-direction:column;justify-content:flex-start;padding-top:28px;margin:0}
-
-/* ---------- fontes ---------- */
-.refs{columns:2;column-gap:3rem;margin-top:1rem}
-.ref{break-inside:avoid;margin-bottom:1rem;padding-left:1.1rem;position:relative;font-size:clamp(.78rem,.95vw,.92rem);color:var(--ink-soft);line-height:1.45}
+/* ---------- fontes (slide final) ---------- */
+.refs{columns:2;column-gap:3rem;margin-top:.6rem}
+.ref{break-inside:avoid;margin-bottom:.85rem;padding-left:1.1rem;position:relative;font-size:clamp(.76rem,.92vw,.9rem);color:var(--ink-soft);line-height:1.45}
 .ref::before{content:"";position:absolute;left:0;top:.5em;width:7px;height:7px;border-radius:50%;background:var(--green)}
 .ref b{color:#fff;font-weight:600}
 
 /* ---------- capa ---------- */
 .cover{align-items:center;text-align:center}
-.cover .slide-inner{display:flex;flex-direction:column;align-items:center;gap:1.8rem;max-width:1100px;margin:0 auto}
-.cover h1{font-size:clamp(2rem,4.8vw,4.4rem)}
+.cover .slide-inner{display:flex;flex-direction:column;align-items:center;gap:1.7rem;max-width:1100px;margin:0 auto}
+.cover h1{font-size:clamp(2rem,4.6vw,4.2rem)}
 .cover .logo-chip{width:96px;height:96px;border-radius:24px;background:#fff;display:grid;place-items:center;overflow:hidden;box-shadow:0 20px 60px -20px rgba(45,212,191,.5)}
 .cover .logo-chip img{width:100%;height:100%;object-fit:contain;padding:6px}
 .cover .rule{width:120px;height:3px;border-radius:3px;background:linear-gradient(90deg,transparent,var(--green),transparent)}
-.cover .authors{color:var(--ink-dim);font-size:.9rem;letter-spacing:.04em;max-width:60ch}
+.cover .authors{color:var(--ink-dim);font-size:.9rem;letter-spacing:.04em;max-width:62ch}
 
 /* ---------- HUD / navegação ---------- */
 .nav{position:fixed;bottom:26px;left:50%;transform:translateX(-50%);z-index:50;display:flex;align-items:center;gap:14px}
@@ -188,8 +151,8 @@ tbody tr.is-active{background:rgba(52,211,153,.07)}
 .dot{width:9px;height:9px;border-radius:50%;background:var(--line-strong);transition:.3s;cursor:pointer}
 .dot.on{background:var(--green);width:26px;border-radius:5px;box-shadow:0 0 12px rgba(52,211,153,.7)}
 
-/* progresso de etapa */
-.progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--green),var(--green-2));width:0;z-index:60;transition:width .5s ease;box-shadow:0 0 10px rgba(52,211,153,.6)}
+/* progresso */
+.progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--green),var(--green-2));width:0;z-index:60;transition:width .6s ease;box-shadow:0 0 10px rgba(52,211,153,.6)}
 
 /* contador de slide + dica */
 .hud-tr{position:fixed;top:22px;right:30px;z-index:50;text-align:right;color:var(--ink-dim);font-size:.82rem;letter-spacing:.06em}
@@ -200,7 +163,7 @@ kbd{background:rgba(255,255,255,.06);border:1px solid var(--line-strong);border-
 .brand-tag .u{color:var(--green)}
 .brand-tag small{font-weight:500;color:var(--ink-dim);letter-spacing:.1em;font-size:.6rem;text-transform:uppercase;margin-left:.4ch}
 
-/* botão "olhinho" — esconde toda a interface pra gravar limpo */
+/* botão "olhinho" — esconde a interface pra gravar limpo */
 #eye{
   position:fixed;bottom:24px;right:30px;z-index:70;
   width:42px;height:42px;border-radius:50%;border:1px solid var(--line-strong);
@@ -209,7 +172,6 @@ kbd{background:rgba(255,255,255,.06);border:1px solid var(--line-strong);border-
 }
 #eye svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 #eye:hover{border-color:var(--green);color:var(--green);transform:translateY(-2px)}
-/* modo limpo: some tudo em volta, e o próprio olho fica quase invisível (some no hover) */
 body.clean .nav,
 body.clean .brand-tag,
 body.clean .hud-tr,
@@ -221,10 +183,9 @@ body.clean #eye:hover{opacity:1}
 @media screen and (max-width:820px){
   .cols-2,.cols-3{grid-template-columns:1fr}
   .refs{columns:1}
-  .tl-row{grid-template-columns:1fr 1fr}
 }
 
-/* ====== CELULAR / telas estreitas: evita corte, permite rolar ====== */
+/* ====== CELULAR / telas estreitas ====== */
 @media screen and (max-width:760px){
   html,body{overflow:hidden}
   .slide{
@@ -232,26 +193,14 @@ body.clean #eye:hover{opacity:1}
     justify-content:flex-start;padding:14vh 7vw 16vh;
     -webkit-overflow-scrolling:touch;
   }
-  .slide.active .slide-inner{animation:none}     /* desliga o "respiro" pra não cortar */
-  .slide-inner{transform:none!important}
-  /* tudo em 1 coluna, inclusive os grids com colunas no inline style */
   .grid{grid-template-columns:1fr!important;gap:.9rem!important}
-  .grid[style*="align-items:center"]{align-items:stretch!important;gap:1rem!important}
-  .tl-row{grid-template-columns:1fr!important;gap:.4rem}
-  /* tipografia mais compacta no celular */
+  .grid[style*="align-items"]{align-items:stretch!important;gap:1rem!important}
   h1{font-size:clamp(2rem,8.5vw,2.8rem)}
   h2{font-size:clamp(1.4rem,6vw,2rem)}
   .stat .num{font-size:clamp(2rem,11vw,3rem)}
   p.lead{font-size:1rem}
   .slide-title{margin-bottom:1.4rem}
   .card{padding:1.1rem 1.2rem}
-  /* timeline vira lista vertical legível */
-  .timeline{height:auto;min-height:0;display:block}
-  .tl-line,.tl-fill{display:none}
-  .tl-up,.tl-down{margin:.2rem 0;padding:0;display:block;flex:none}
-  .tl-item{text-align:left;border-left:2px solid var(--line-strong);padding:.4rem 0 .4rem 1rem;height:auto;display:block}
-  .tl-dot{display:none}
-  /* HUD enxuto */
   .nav{bottom:14px;gap:8px}
   .nav button{width:46px;height:46px}
   .nav .nav-arrow{width:52px;height:52px}
@@ -261,10 +210,6 @@ body.clean #eye:hover{opacity:1}
   #eye{bottom:16px;right:16px;width:38px;height:38px}
   .refs{columns:1}
   .cover{justify-content:center}
-}
-@media screen and (max-width:760px) and (orientation:landscape){
-  .slide{padding:10vh 6vw 14vh}
-  h1{font-size:clamp(1.6rem,6vw,2.4rem)}
 }
 
 /* ============ MODO IMPRESSÃO / EXPORTAR PDF ============ */
@@ -278,22 +223,15 @@ body.clean #eye:hover{opacity:1}
   .slide{
     width:1280px!important;height:720px!important;flex:none!important;
     page-break-after:always;break-after:page;overflow:hidden;
+    padding-top:5vh!important;padding-bottom:5vh!important;
     background:
       radial-gradient(900px 520px at 80% -10%, rgba(45,212,191,.10), transparent 60%),
       radial-gradient(700px 460px at -10% 110%, rgba(30,58,138,.18), transparent 55%),
       var(--bg)!important;
   }
   .slide:last-child{page-break-after:auto}
-  .slide{padding-top:5vh!important;padding-bottom:5vh!important}
-  .slide-inner{transform:none!important;animation:none!important}
-  .step{opacity:1!important;transform:none!important;filter:none!important}
-  .step.is-read{opacity:1!important}
-  .card.is-active{transform:none!important;box-shadow:none!important}
-  .tl-line,.tl-fill{display:block!important}
-  .tl-fill{width:100%!important}
-  .tl-dot{background:var(--green)!important;box-shadow:none!important}
-  tbody tr.is-active{background:transparent!important}
-  /* gradiente recortado em texto não sobrevive no PDF -> usa verde sólido */
+  .step{opacity:1!important;transform:none!important;filter:none!important;transition:none!important}
+  /* gradiente recortado em texto não sobrevive no PDF -> verde sólido */
   .grad{background:none!important;-webkit-background-clip:border-box!important;background-clip:border-box!important;color:var(--green)!important;-webkit-text-fill-color:var(--green)!important}
   /* sombras/glow viram quadrados no PDF -> remove */
   *{box-shadow:none!important}
@@ -304,8 +242,8 @@ body.clean #eye:hover{opacity:1}
 <body>
 
 <div class="progress" id="progress"></div>
-<div class="brand-tag">Fin<span class="u">UP</span><small>Etapa 3</small></div>
-<div class="hud-tr"><span class="n" id="slideNum">01</span> / <span id="slideTot">09</span></div>
+<div class="brand-tag">Fin<span class="u">UP</span><small>Etapa 4</small></div>
+<div class="hud-tr"><span class="n" id="slideNum">01</span> / <span id="slideTot">10</span></div>
 
 <div id="stage">
   <div id="track">
@@ -314,247 +252,237 @@ body.clean #eye:hover{opacity:1}
     <section class="slide cover" data-name="Capa">
       <div class="slide-inner">
         <div class="logo-chip step"><img src="logo%20finupp.jpeg" alt="FinUP" /></div>
-        <span class="kicker step">Estudo de Viabilidade Econômica · Etapa 3</span>
-        <h1 class="step">FinUP: Desenvolvimento Regional <br/>e <span class="grad">Sustentabilidade Macroeconômica</span></h1>
+        <span class="kicker step">Estudo de Viabilidade · Etapa 4</span>
+        <h1 class="step">FinUP: Complexidade Econômica <br/>e <span class="grad">Impacto Social Cidades MIL</span></h1>
         <div class="rule step"></div>
-        <p class="lead step" style="text-align:center">Análise integrada de geração de valor ao PIB, mercado de trabalho potiguar e retenção comercial de divisas.</p>
+        <p class="lead step" style="text-align:center">A conexão final entre <b style="color:var(--ink-soft)">sofisticação produtiva</b>, <b style="color:var(--ink-soft)">identidade local</b> e as <b style="color:var(--ink-soft)">pautas sociais</b> que a FinUP movimenta.</p>
         <p class="authors step">Anna Beatriz Neres · Bianca Lauanny Neres · Flávio Ambiplay de Assis Jr. · Gustavo Martinelly de Lima · Samuel Silva de Lima &nbsp;|&nbsp; GECTI · UFRN · 2026</p>
       </div>
     </section>
 
-    <!-- ================= 2 · CENÁRIO (HOOK) ================= -->
-    <section class="slide" data-name="O Cenário">
+    <!-- ================= 2 · FIO CONDUTOR ================= -->
+    <section class="slide" data-name="O fio condutor">
       <div class="slide-inner">
-        <div class="slide-title step"><h2>O Brasil que não controla o próprio dinheiro</h2></div>
-        <div class="grid cols-3 focus-group">
-          <div class="card stat step">
-            <div class="num grad" data-count="81.7" data-suffix=" mi">0</div>
-            <div class="lbl">brasileiros <b>inadimplentes</b> — recorde histórico (≈49,6% dos adultos).</div>
-            <div class="src">Serasa Experian, fev/2026</div>
-          </div>
-          <div class="card stat step">
-            <div class="num grad" data-count="80.2" data-suffix="%">0</div>
-            <div class="lbl">das <b>famílias endividadas</b> — maior nível da série iniciada em 2010.</div>
-            <div class="src">CNC — PEIC, fev/2026</div>
-          </div>
-          <div class="card stat step">
-            <div class="num grad" data-count="47" data-suffix="%">0</div>
-            <div class="lbl">dos <b>jovens da Geração Z não controlam</b> as próprias finanças; só 9% usam app.</div>
-            <div class="src">CNDL / SPC Brasil</div>
-          </div>
-        </div>
-        <p class="lead step" style="margin-top:2.2rem">No PISA de educação financeira, o Brasil tirou <b style="color:var(--green)">416 pontos</b> — contra 498 da média da OCDE. É nesse vácuo que a <b>FinUP</b> se insere como infraestrutura de impacto.</p>
-      </div>
-    </section>
-
-    <!-- ================= 2.5 · PESQUISA DE CAMPO (DADO PRIMÁRIO) ================= -->
-    <section class="slide" data-name="Nossa Pesquisa de Campo">
-      <div class="slide-inner">
-        <div class="slide-title step"><h2>Validação de Mercado — Nossa Pesquisa no RN</h2></div>
-        <p class="lead step" style="margin-bottom:1.8rem">Aplicamos um formulário com <b style="color:var(--green)">75 jovens</b> — 88% do Rio Grande do Norte e 72% na faixa de 18 a 24 anos. O problema macroeconômico se confirma na ponta:</p>
-        <div class="grid cols-4 focus-group" style="grid-template-columns:repeat(4,1fr)">
-          <div class="card stat step" style="padding:1.4rem 1.5rem">
-            <div class="num grad" data-count="76" data-suffix="%">0</div>
-            <div class="lbl">já ficaram <b>sem dinheiro antes do fim do mês</b>.</div>
-          </div>
-          <div class="card stat step" style="padding:1.4rem 1.5rem">
-            <div class="num grad" data-count="70.7" data-suffix="%">0</div>
-            <div class="lbl">não usam <b>nenhum app financeiro</b> hoje.</div>
-          </div>
-          <div class="card stat step" style="padding:1.4rem 1.5rem">
-            <div class="num grad" data-count="92" data-suffix="%">0</div>
-            <div class="lbl"><b>usariam a FinUP</b> (60% sim + 32% talvez).</div>
-          </div>
-          <div class="card stat step" style="padding:1.4rem 1.5rem">
-            <div class="num grad" data-count="7.5" data-prefix="R$ ">0</div>
-            <div class="lbl"><b>ticket-médio</b> validado pela disposição a pagar.</div>
-          </div>
-        </div>
-        <p class="sub step" style="margin-top:1.6rem">Fonte: Pesquisa de campo FinUP (Etapa 2) — 75 respondentes, mai/2026. Dado primário da equipe.</p>
-      </div>
-    </section>
-
-    <!-- ================= 3 · 3.1 PIB E VALOR AGREGADO ================= -->
-    <section class="slide" data-name="3.1 PIB e Valor Agregado">
-      <div class="slide-inner">
-        <div class="slide-title step"><h2>3.1 · PIB e Valor Agregado Potiguar</h2></div>
-        <div class="grid cols-3 focus-group" style="margin-bottom:1.8rem">
-          <div class="card stat step">
-            <div class="num grad" data-count="101.7" data-suffix=" bi" data-prefix="R$ ">0</div>
-            <div class="lbl">PIB do Rio Grande do Norte — 1ª vez acima de R$ 100 bi (0,9% do PIB nacional).</div>
-            <div class="src">IBGE — Contas Regionais, 2023</div>
-          </div>
-          <div class="card stat step">
-            <div class="num grad" data-count="72.4" data-suffix="%">0</div>
-            <div class="lbl">do PIB potiguar vem do <b>setor de Serviços</b> — onde a FinUP atua.</div>
-            <div class="src">IBGE — VAB do RN, 2023</div>
-          </div>
-          <div class="card stat step">
-            <div class="num grad" data-count="3.59" data-suffix="%">0</div>
-            <div class="lbl">do PIB do Brasil é <b>economia criativa</b> (R$ 393,3 bi) — segmento da FinUP.</div>
-            <div class="src">FIRJAN — Mapeamento 2025</div>
-          </div>
-        </div>
-        <div class="grid cols-2 focus-group">
+        <div class="slide-title step"><h2>O fio condutor da Etapa 4</h2></div>
+        <p class="lead step" style="margin-bottom:1.8rem">Três perguntas conectam a tecnologia da FinUP ao desenvolvimento real do Rio Grande do Norte e do Brasil:</p>
+        <div class="grid cols-3">
           <div class="card step">
             <div class="ico"><svg viewBox="0 0 24 24"><polyline points="3 17 9 11 13 15 21 6"/><polyline points="15 6 21 6 21 12"/></svg></div>
-            <h3>Contribuição Setorial Direta</h3>
-            <p>O ecossistema de fintechs do Brasil — <b>1.706 empresas</b> e líder absoluto da América Latina — é vetor de alta produtividade. A FinUP digitaliza capital e moderniza o setor de serviços do RN, capturando valor excedente de transações locais.</p>
-            <span class="src">Distrito — Panorama de Fintechs, 2025</span>
+            <span class="tag">4.1 · Complexidade</span>
+            <h3>Sofisticação produtiva</h3>
+            <p>Como um negócio digital ajuda o RN e o Brasil a <b>desenvolver novas capacidades produtivas</b> e a saltar para setores mais sofisticados?</p>
           </div>
           <div class="card step">
-            <div class="ico"><svg viewBox="0 0 24 24"><polyline points="21 4 21 9 16 9"/><polyline points="3 20 3 15 8 15"/><path d="M19 9a8 8 0 0 0-13.6-3.4L3 8"/><path d="M5 15a8 8 0 0 0 13.6 3.4L21 16"/></svg></div>
-            <h3>Efeito Multiplicador Local</h3>
-            <p>Ao promover adimplência e poupança entre os jovens potiguares, a FinUP gera estímulo indireto no comércio: recursos antes perdidos em juros de mora passam a circular de forma estruturada no mercado local.</p>
-            <span class="src">Base: CNC-PEIC + Serasa, 2025/26</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= 4 · PROJEÇÕES (TABELA) ================= -->
-    <section class="slide" data-name="Projeções Macroeconômicas">
-      <div class="slide-inner">
-        <div class="slide-title step"><h2>Projeções Macroeconômicas</h2></div>
-        <div class="card step" style="padding:1rem 1.2rem">
-          <table>
-            <thead>
-              <tr><th>Métrica de Impacto</th><th>Ano 1 · Foco Local</th><th>Ano 2 · Foco Regional</th><th>Ano 3 · Consolidação</th></tr>
-            </thead>
-            <tbody>
-              <tr class="row-step step"><td>Faturamento estimado (mercado RN)</td><td>R$ 450.000</td><td>R$ 1.200.000</td><td>R$ 3.100.000</td></tr>
-              <tr class="row-step step"><td>Retenção tributária (ISS / ICMS)</td><td>R$ 22.500</td><td>R$ 60.000</td><td>R$ 155.000</td></tr>
-              <tr class="row-step step"><td>Empregos diretos e indiretos</td><td>12 postos</td><td>35 postos</td><td>85 postos</td></tr>
-              <tr class="row-step step"><td>Capital externo de fomento atraído</td><td class="hl">R$ 150.000</td><td class="hl">R$ 400.000</td><td class="hl">R$ 1.000.000</td></tr>
-            </tbody>
-          </table>
-        </div>
-        <p class="sub step" style="margin-top:1.2rem">Projeção própria de cenário conservador, ancorada em parâmetros reais de fomento (Centelha RN, FIP Nordeste) e tributação de serviços do estado.</p>
-      </div>
-    </section>
-
-    <!-- ================= 5 · 3.2 INVESTIMENTOS E EMPREGO ================= -->
-    <section class="slide" data-name="3.2 Investimentos e Emprego">
-      <div class="slide-inner">
-        <div class="slide-title step"><h2>3.2 · Investimentos e Geração de Emprego</h2></div>
-        <div class="grid cols-3 focus-group">
-          <div class="card step">
-            <div class="ico"><svg viewBox="0 0 24 24"><polyline points="9 8 5 12 9 16"/><polyline points="15 8 19 12 15 16"/></svg></div>
-            <h3>Postos Diretos</h3>
-            <p>Como o diferencial da FinUP é a <b>IA</b>, a empresa precisa contratar <b>devs, engenheiros de IA e cientistas de dados</b>, além de conteúdo e suporte — absorvendo talentos da UFRN/IFRN. Salário médio dev pleno no Brasil: <b style="color:var(--green)">R$ 7,8 mil</b>.</p>
-            <span class="src">Pesquisa Código Fonte TV, 2025</span>
+            <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5 3.5 8.5 8 11 4.5-2.5 8-6 8-11V5l-8-3z"/><path d="M9 12l2 2 4-4"/></svg></div>
+            <span class="tag">4.2 · Cidades MIL</span>
+            <h3>Identidade & informação</h3>
+            <p>De que forma a FinUP <b>combate a desinformação</b> dentro do seu nicho — as finanças?</p>
           </div>
           <div class="card step">
-            <div class="ico"><svg viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></div>
-            <h3>Cadeia Indireta</h3>
-            <p>Cada emprego em alta tecnologia gera até <b style="color:var(--green)">6,9 empregos</b> em serviços locais (IPEA) — publicidade, conteúdo educacional regional e consultorias regulatórias.</p>
-            <span class="src">IPEA, TD 1994 (2014) · Moretti (2012)</span>
+            <div class="ico"><svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.9"/><path d="M16 3.1a4 4 0 0 1 0 7.8"/></svg></div>
+            <span class="tag">4.3 · UNICEF</span>
+            <h3>Pauta social</h3>
+            <p>Como o negócio <b>impacta positivamente jovens e crianças</b>: educação, segurança digital e geração de renda ética?</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 3 · 4.1 COMPLEXIDADE: DIAGNÓSTICO ================= -->
+    <section class="slide" data-name="4.1 Complexidade Econômica">
+      <div class="slide-inner">
+        <div class="slide-title step"><h2>4.1 · Complexidade Econômica</h2></div>
+        <p class="lead step" style="margin-bottom:1.6rem">Complexidade econômica mede o <b style="color:var(--ink-soft)">conhecimento</b> que uma sociedade acumula e expressa nos produtos que consegue fazer. Quanto mais diversa e sofisticada a produção, mais rica e resiliente a economia <span class="sub">(Hausmann & Hidalgo · Atlas de Harvard)</span>. O problema: o Brasil está andando para trás.</p>
+        <div class="grid cols-3">
+          <div class="card stat step">
+            <div class="num grad">56º</div>
+            <div class="lbl">posição do <b>Brasil</b> no Índice de Complexidade Econômica — caiu <b>13 posições</b> na última década.</div>
+          </div>
+          <div class="card stat step">
+            <div class="num grad">65%</div>
+            <div class="lbl">das exportações do Brasil já são <b>commodities</b> — "reprimarização": o país produz cada vez menos coisas sofisticadas.</div>
+          </div>
+          <div class="card stat step">
+            <div class="num grad">60,6%</div>
+            <div class="lbl">do PIB industrial do <b>RN</b> vem só do petróleo. O estado vende matéria-prima (sal, fruta, camarão) e compra industrializado.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 4 · 4.1 FINUP SOBE A ESCADA ================= -->
+    <section class="slide" data-name="4.1 Subindo a escada">
+      <div class="slide-inner">
+        <div class="eyebrow step">4.1 · Complexidade Econômica</div>
+        <div class="slide-title step"><h2>Como a FinUP sobe na escada da complexidade</h2></div>
+        <p class="lead step" style="margin-bottom:1.6rem">Economias crescem acumulando capacidades e migrando para atividades vizinhas mais sofisticadas. <b style="color:var(--ink-soft)">Software e IA estão no topo dessa escada</b> — são conhecimento puro, que fica nas pessoas.</p>
+        <div class="grid cols-3">
+          <div class="card step">
+            <div class="ico"><svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+            <h3>Capacidades que ficam</h3>
+            <p>Para construir a FinUP, o RN forma <b>devs, engenheiros de IA e cientistas de dados</b>. Esse conhecimento é uma capacidade produtiva nova — que se reaproveita em outros setores.</p>
+          </div>
+          <div class="card stat step">
+            <div class="num grad">530 mil</div>
+            <div class="lbl">é o <b>déficit de profissionais de tecnologia</b> no Brasil (Brasscom). A FinUP ajuda a formar e reter o talento técnico que falta no RN.</div>
+          </div>
+          <div class="card stat step">
+            <div class="num grad">6,5%</div>
+            <div class="lbl">do PIB é o macrossetor de <b>TIC</b> (R$ 762 bi) — setor de alta complexidade onde a FinUP insere o RN, hoje quase ausente da pauta exportadora estadual.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 5 · 4.2 CIDADES MIL ================= -->
+    <section class="slide" data-name="4.2 Cidades MIL">
+      <div class="slide-inner">
+        <div class="slide-title step"><h2>4.2 · Cidades MIL e o combate à desinformação</h2></div>
+        <p class="lead step" style="margin-bottom:1.6rem"><b style="color:var(--ink-soft)">MIL</b> (Mídia e Informação / AMI) é o conjunto de competências que a UNESCO chama de <b class="hl">"a primeira linha de defesa contra a desinformação"</b> — formar pessoas críticas diante do que leem, compartilham e em quem confiam.</p>
+        <div class="grid cols-3" style="align-items:stretch">
+          <div class="card feat step">
+            <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5 3.5 8.5 8 11 4.5-2.5 8-6 8-11V5l-8-3z"/><path d="M9 12l2 2 4-4"/></svg></div>
+            <span class="tag">Piloto da UNESCO no RN</span>
+            <h3>São Gonçalo do Amarante</h3>
+            <p>foi uma das <b>10 cidades-piloto</b> do programa <b>Cidades MIL</b> da UNESCO, lançado em jun/2025 — aqui, no Rio Grande do Norte.</p>
+          </div>
+          <div class="card stat step">
+            <div class="num grad">85%</div>
+            <div class="lbl">das pessoas estão <b>preocupadas</b> com o impacto da desinformação online <span class="sub">(UNESCO/Ipsos, 2023)</span>.</div>
+          </div>
+          <div class="card stat step">
+            <div class="num grad">~90%</div>
+            <div class="lbl">dos <b>brasileiros</b> admitem já ter acreditado em conteúdo falso <span class="sub">(Instituto Locomotiva, 2024)</span>.</div>
+          </div>
+        </div>
+        <p class="sub step" style="margin-top:1.4rem">A desinformação também é <b style="color:var(--green)">financeira</b> — e é exatamente nesse nicho que a FinUP atua.</p>
+      </div>
+    </section>
+
+    <!-- ================= 6 · 4.2 FINUP CONTRA A DESINFORMAÇÃO FINANCEIRA ================= -->
+    <section class="slide" data-name="4.2 IA contra golpe">
+      <div class="slide-inner">
+        <div class="eyebrow step">4.2 · Cidades MIL</div>
+        <div class="slide-title step"><h2>A IA da FinUP contra a desinformação financeira</h2></div>
+        <div class="grid cols-3" style="margin-bottom:1.6rem">
+          <div class="card stat step">
+            <div class="num grad">R$ 10,1 bi</div>
+            <div class="lbl">perdidos com <b>golpes financeiros</b> no Brasil em 2024 (+17%) <span class="sub">(Febraban)</span>.</div>
+          </div>
+          <div class="card stat step">
+            <div class="num grad">R$ 6,5 bi</div>
+            <div class="lbl">em <b>fraudes confirmadas no PIX</b> em um único ano <span class="sub">(Banco Central)</span>.</div>
+          </div>
+          <div class="card stat step">
+            <div class="num grad">73%</div>
+            <div class="lbl">dos novos investidores aprenderam a investir com <b>youtubers e influenciadores</b> <span class="sub">(B3)</span> — terreno de "renda fácil" e pirâmides.</div>
+          </div>
+        </div>
+        <div class="card feat step">
+          <div class="ico"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><path d="M11 8v3l2 1.5"/></svg></div>
+          <h3>A FinUP é um instrumento de MIL</h3>
+          <p>O <b>assistente de IA</b> entrega educação financeira imparcial e verificável, ajudando o jovem a reconhecer o golpe, a promessa de renda fácil e o finfluencer irresponsável. Hoje só <b class="hl">35% dos brasileiros</b> têm letramento financeiro — e menos letramento significa mais vulnerabilidade à fraude.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 7 · 4.3 UNICEF E JUVENTUDE ================= -->
+    <section class="slide" data-name="4.3 Pauta UNICEF">
+      <div class="slide-inner">
+        <div class="slide-title step"><h2>4.3 · Pauta UNICEF e Juventude</h2></div>
+        <p class="lead step" style="margin-bottom:1.6rem">A FinUP nasce alinhada às prioridades da UNICEF para a adolescência: <b style="color:var(--ink-soft)">educação, habilidades para o futuro do trabalho e cidadania digital</b>.</p>
+        <div class="grid cols-3">
+          <div class="card stat step">
+            <div class="num grad">1 em 3</div>
+            <div class="lbl">usuários de internet no mundo é uma <b>criança</b> — proteger esse público é pauta global da UNICEF.</div>
+          </div>
+          <div class="card stat step">
+            <div class="num grad">93%</div>
+            <div class="lbl">dos brasileiros de <b>9 a 17 anos</b> usam internet (24,5 mi); <b>30%</b> já tiveram contato com estranhos online <span class="sub">(TIC Kids Online, 2024)</span>.</div>
+          </div>
+          <div class="card feat step">
+            <div class="ico"><svg viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
+            <span class="tag">UNICEF / GenU</span>
+            <h3>Passport to Earning</h3>
+            <p>programa de habilidades <b>digitais, financeiras e de empregabilidade</b> (15–24 anos), presente no Brasil — exatamente o que a FinUP entrega.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 8 · 4.3 TRÊS IMPACTOS ================= -->
+    <section class="slide" data-name="4.3 Educação · Segurança · Renda">
+      <div class="slide-inner">
+        <div class="eyebrow step">4.3 · Pauta UNICEF</div>
+        <div class="slide-title step"><h2>Educação, segurança digital e renda ética</h2></div>
+        <div class="grid cols-3">
+          <div class="card step">
+            <div class="ico"><svg viewBox="0 0 24 24"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2.5 9 2.5 12 0v-5"/></svg></div>
+            <span class="tag">Educação</span>
+            <h3>Conteúdo na linguagem deles</h3>
+            <p>No PISA 2022, o Brasil tirou <b class="hl">416</b> em educação financeira e <b>45%</b> dos jovens de 15 anos não atingem o nível básico (OCDE). A FinUP ensina onde a escola não chega.</p>
           </div>
           <div class="card step">
-            <div class="ico"><svg viewBox="0 0 24 24"><line x1="3" y1="21" x2="21" y2="21"/><polyline points="3 10 12 4 21 10"/><line x1="6" y1="10" x2="6" y2="21"/><line x1="10" y1="10" x2="10" y2="21"/><line x1="14" y1="10" x2="14" y2="21"/><line x1="18" y1="10" x2="18" y2="21"/></svg></div>
-            <h3>Atração de Capital</h3>
-            <p>Acesso a fomento real: <b>Centelha 3 RN</b> (até R$ 135 mil/projeto) e o <b>FIP Nordeste Capital Semente</b> (R$ 150 mi, que lista fintech explicitamente).</p>
-            <span class="src">FAPERN/Sebrae · BNB-FINEP-Sebrae, 2025</span>
+            <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5 3.5 8.5 8 11 4.5-2.5 8-6 8-11V5l-8-3z"/></svg></div>
+            <span class="tag">Segurança digital</span>
+            <h3>Letramento que protege</h3>
+            <p>Num ambiente cheio de golpe e "renda fácil", a FinUP ensina o jovem a <b>se proteger online</b> — letramento financeiro como parte da cidadania digital.</p>
+          </div>
+          <div class="card step">
+            <div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M15 9.5a3 3 0 0 0-3-1.5c-1.7 0-3 .9-3 2s1.3 2 3 2 3 .9 3 2-1.3 2-3 2a3 3 0 0 1-3-1.5"/><line x1="12" y1="6" x2="12" y2="18"/></svg></div>
+            <span class="tag">Renda ética</span>
+            <h3>Crédito responsável</h3>
+            <p>O rotativo do cartão chegou a <b class="hl">440% ao ano</b> (BCB) e as renegociações de dívida da Geração Z cresceram <b>49%</b> (Serasa, 2025). A FinUP orienta crédito consciente.</p>
           </div>
         </div>
-        <p class="lead step" style="margin-top:2rem">O Nordeste já reúne <b style="color:var(--green)">25,2% das startups do Brasil</b>, mas capta apenas 0,84% do venture capital nacional — uma lacuna que a FinUP transforma em oportunidade de atração de investimento para o RN.</p>
+        <p class="lead step" style="margin-top:1.6rem">No RN, <b class="hl">23,9% dos jovens</b> não estudam nem trabalham (IBGE). A FinUP devolve a eles ferramentas de autonomia financeira.</p>
       </div>
     </section>
 
-    <!-- ================= 6 · 3.3 RETENÇÃO DE DIVISAS ================= -->
-    <section class="slide" data-name="3.3 Setor Externo e Divisas">
+    <!-- ================= 9 · SÍNTESE ================= -->
+    <section class="slide" data-name="Síntese">
       <div class="slide-inner">
-        <div class="slide-title step"><h2>3.3 · Soberania e Retenção de Divisas</h2></div>
-        <div class="grid cols-2" style="align-items:center;gap:3rem">
-          <div class="focus-group" style="display:flex;flex-direction:column;gap:1.3rem">
-            <div class="card stat step" style="padding:1.3rem 1.6rem">
-              <div class="num grad" data-count="52.9" data-suffix=" bi" data-prefix="US$ ">0</div>
-              <div class="lbl">déficit recorde da <b>balança de serviços</b> do Brasil — divisas que saem do país.</div>
-              <div class="src">Banco Central do Brasil, 2025</div>
-            </div>
-            <div class="card stat step" style="padding:1.3rem 1.6rem">
-              <div class="num grad" data-count="15.8" data-suffix=" bi" data-prefix="US$ ">0</div>
-              <div class="lbl">saíram só em <b>software, streaming e cloud</b> estrangeiros num único ano.</div>
-              <div class="src">BCB — Propriedade Intelectual + Computação, 2024</div>
-            </div>
+        <div class="slide-title step"><h2>Por que a Etapa 4 fecha o ciclo</h2></div>
+        <div class="grid cols-3">
+          <div class="card step">
+            <div class="ico"><svg viewBox="0 0 24 24"><polyline points="3 17 9 11 13 15 21 6"/><polyline points="15 6 21 6 21 12"/></svg></div>
+            <h3>Sofisticação produtiva</h3>
+            <p>A FinUP eleva a <b>complexidade econômica</b> do RN, formando capacidades locais de software e IA num estado dependente de commodities.</p>
           </div>
-          <div class="focus-group" style="display:flex;flex-direction:column;gap:1.1rem">
-            <div class="card step">
-              <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5 3.5 8.5 8 11 4.5-2.5 8-6 8-11V5l-8-3z"/></svg></div>
-              <h3>O dinheiro fica aqui</h3>
-              <p>Como o FinUP é uma empresa do RN, o que os jovens pagam pelo app — e os <b>dados deles</b> — ficam no Brasil, em vez de irem para apps estrangeiros.</p>
-            </div>
-            <div class="card step">
-              <div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.8 2.4 4.5 5.6 4.5 9s-1.7 6.6-4.5 9c-2.8-2.4-4.5-5.6-4.5-9S9.2 5.4 12 3z"/></svg></div>
-              <h3>Pode crescer lá fora</h3>
-              <p>No futuro, o FinUP tem <b>potencial</b> de chegar a outros países da América do Sul e que falam português — trazendo <b style="color:var(--green)">dinheiro de fora pra cá</b>.</p>
-            </div>
+          <div class="card step">
+            <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5 3.5 8.5 8 11 4.5-2.5 8-6 8-11V5l-8-3z"/><path d="M9 12l2 2 4-4"/></svg></div>
+            <h3>Identidade & informação</h3>
+            <p>Combate a <b>desinformação financeira</b> como instrumento de MIL, na linha das Cidades MIL da UNESCO.</p>
+          </div>
+          <div class="card step">
+            <div class="ico"><svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.9"/><path d="M16 3.1a4 4 0 0 1 0 7.8"/></svg></div>
+            <h3>Pauta social</h3>
+            <p>Protege e capacita a <b>juventude</b>: educação financeira, segurança digital e geração de renda ética.</p>
           </div>
         </div>
+        <p class="lead step" style="margin-top:2rem;text-align:center;max-width:none">Tecnologia de alta complexidade a serviço de uma juventude mais <span class="grad">informada, segura e financeiramente livre</span>.</p>
       </div>
     </section>
 
-    <!-- ================= 7 · CRONOGRAMA ================= -->
-    <section class="slide" data-name="Cronograma de Impacto">
-      <div class="slide-inner">
-        <div class="slide-title step"><h2>Cronograma de Impacto Sistêmico</h2></div>
-        <div class="timeline">
-          <div class="tl-line"></div><div class="tl-fill" id="tlFill"></div>
-          <div class="tl-row focus-group">
-            <div class="tl-item step">
-              <div class="tl-up"><h4>Fase I · Ativação</h4><p>Contratação de engenharia local e início da atração de capital semente regional.</p></div>
-              <div class="tl-dot"></div><div class="tl-down"></div>
-            </div>
-            <div class="tl-item step">
-              <div class="tl-up"></div><div class="tl-dot"></div>
-              <div class="tl-down"><h4>Fase II · Substituição</h4><p>Substituição progressiva de SaaS de finanças estrangeiros em Natal e Grande Natal.</p></div>
-            </div>
-            <div class="tl-item step">
-              <div class="tl-up"><h4>Fase III · Escala</h4><p>Expansão interestadual (Nordeste), ampliando a base tributária retida no RN.</p></div>
-              <div class="tl-dot"></div><div class="tl-down"></div>
-            </div>
-            <div class="tl-item step">
-              <div class="tl-up"></div><div class="tl-dot"></div>
-              <div class="tl-down"><h4>Fase IV · Exportação</h4><p>Inserção internacional do ecossistema e início da atração de divisas globais.</p></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= 8 · SÍNTESE ================= -->
-    <section class="slide" data-name="Síntese de Impacto">
-      <div class="slide-inner">
-        <div class="slide-title step"><h2>Por que a FinUP importa para o RN e o Brasil</h2></div>
-        <div class="grid cols-3 focus-group">
-          <div class="card step"><div class="ico"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v6c0 1.7 3.6 3 8 3s8-1.3 8-3V6"/><path d="M4 12v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></svg></div><h3>Gera valor</h3><p>Captura valor no setor de serviços (72% do PIB potiguar) e na economia criativa, com retenção tributária local.</p></div>
-          <div class="card step"><div class="ico"><svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.9"/><path d="M16 3.1a4 4 0 0 1 0 7.8"/></svg></div><h3>Gera emprego</h3><p>Como empresa de IA, contrata um time técnico (devs, engenheiros de IA, suporte) e movimenta uma cadeia indireta de conteúdo e marketing no RN.</p></div>
-          <div class="card step"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.8 2.4 4.5 5.6 4.5 9s-1.7 6.6-4.5 9c-2.8-2.4-4.5-5.6-4.5-9S9.2 5.4 12 3z"/></svg></div><h3>Retém divisas</h3><p>O dinheiro e os dados dos usuários ficam no Brasil, e o app ainda pode crescer lá fora no futuro.</p></div>
-        </div>
-        <p class="lead step" style="margin-top:2.2rem;text-align:center;max-width:none">Tecnologia + educação + gestão financeira como motor de <span class="grad">desenvolvimento regional sustentável</span>.</p>
-      </div>
-    </section>
-
-    <!-- ================= 9 · FONTES ================= -->
-    <section class="slide" data-name="Fontes">
+    <!-- ================= 10 · REFERÊNCIAS ================= -->
+    <section class="slide" data-name="Referências">
       <div class="slide-inner">
         <div class="slide-title step"><h2>Referências</h2></div>
         <div class="refs step">
-          <div class="ref"><b>IBGE</b> — Contas Regionais do Brasil 2023 (PIB do RN: R$ 101,74 bi; Serviços 72,4% do VAB). 2025.</div>
-          <div class="ref"><b>FIRJAN</b> — Mapeamento da Indústria Criativa no Brasil 2025 (economia criativa: 3,59% do PIB; R$ 393,3 bi).</div>
-          <div class="ref"><b>Distrito</b> — Panorama do Mercado de Fintechs na América Latina 2025 (1.706 fintechs no Brasil).</div>
-          <div class="ref"><b>Banco Central do Brasil</b> — Estatísticas do Setor Externo 2024/2025 (déficit de serviços US$ 52,9 bi; software/cloud).</div>
-          <div class="ref"><b>Serasa Experian</b> — Mapa da Inadimplência, fev/2026 (81,7 milhões de inadimplentes).</div>
-          <div class="ref"><b>CNC</b> — Pesquisa de Endividamento e Inadimplência do Consumidor (PEIC), fev/2026 (80,2% das famílias).</div>
-          <div class="ref"><b>CNDL / SPC Brasil</b> — Educação financeira da Geração Z (47% dos jovens não controlam as finanças).</div>
-          <div class="ref"><b>OCDE</b> — PISA 2022 Financial Literacy (Brasil: 416 pontos; média OCDE 498).</div>
-          <div class="ref"><b>IPEA</b> — Macedo & Monasterio, TD 1994 (2014): multiplicador local de emprego em alta tecnologia (6,9).</div>
-          <div class="ref"><b>Brasscom</b> — Setor de TIC = 6,5% do PIB; salários e déficit de profissionais de TI.</div>
-          <div class="ref"><b>ABES</b> — Exportação de software brasileiro (US$ 809 mi, 2023).</div>
-          <div class="ref"><b>FAPERN / Sebrae / BNB-FINEP</b> — Centelha 3 RN e FIP Nordeste Capital Semente (fomento, 2025).</div>
-          <div class="ref"><b>Pesquisa de campo FinUP</b> — Formulário aplicado a 75 jovens do RN, Etapa 2 (mai/2026). Dado primário.</div>
+          <div class="ref"><b>Hidalgo & Hausmann</b> — "The Building Blocks of Economic Complexity", PNAS, 2009.</div>
+          <div class="ref"><b>Harvard Growth Lab</b> — Atlas of Economic Complexity, 2024 (Brasil em 56º; queda de 13 posições na década).</div>
+          <div class="ref"><b>Brasscom</b> — Relatório do Macrossetor de TIC, 2024 (TIC = 6,5% do PIB; déficit de ~530 mil profissionais).</div>
+          <div class="ref"><b>UNESCO</b> — Media and Information Literacy & Cidades MIL, 2020/2025 ("primeira linha de defesa contra a desinformação"; piloto em São Gonçalo do Amarante/RN).</div>
+          <div class="ref"><b>UNESCO / Ipsos</b> — Survey on the Impact of Online Disinformation and Hate Speech, 2023 (85% preocupados).</div>
+          <div class="ref"><b>Febraban</b> — Balanço de golpes financeiros, 2025 (R$ 10,1 bi de prejuízo em 2024, +17%).</div>
+          <div class="ref"><b>Banco Central do Brasil</b> — Estatísticas de fraude no PIX, 2024 (R$ 6,5 bi).</div>
+          <div class="ref"><b>B3 / ANBIMA</b> — Perfil do investidor e finfluencers, 2020/2025 (73% aprendem com influenciadores).</div>
+          <div class="ref"><b>UNICEF / Generation Unlimited</b> — Passport to Earning e agenda da adolescência, 2017/2024.</div>
+          <div class="ref"><b>Cetic.br / NIC.br</b> — TIC Kids Online Brasil, 2024 (93% dos 9–17 anos online; 30% expostos a estranhos).</div>
+          <div class="ref"><b>OCDE</b> — PISA 2022 Financial Literacy (Brasil: 416 pontos; 45% abaixo do nível básico).</div>
+          <div class="ref"><b>IBGE</b> — PNAD Contínua, 2024 (jovens "nem-nem" no RN: 23,9%) · <b>Serasa</b> — Geração Z e dívidas, 2025 (+49%).</div>
         </div>
-        <p class="sub step" style="margin-top:1.4rem">12 fontes oficiais + 1 pesquisa primária da equipe — acima do mínimo de 7 a 10 exigido pela Etapa 3.</p>
+        <p class="sub step" style="margin-top:1.2rem">12 fontes oficiais — bem acima do mínimo de 5 a 7 exigido pela Etapa 4.</p>
       </div>
     </section>
 
@@ -567,7 +495,7 @@ body.clean #eye:hover{opacity:1}
   <div class="dots" id="dots"></div>
   <button id="next" class="nav-arrow" title="Avançar (→ ou espaço)">›</button>
 </div>
-<div class="hint">use <kbd>→</kbd> para focar/avançar &nbsp;·&nbsp; <kbd>F</kbd> tela cheia &nbsp;·&nbsp; <kbd>H</kbd> esconder</div>
+<div class="hint">use <kbd>→</kbd> para avançar &nbsp;·&nbsp; <kbd>F</kbd> tela cheia &nbsp;·&nbsp; <kbd>H</kbd> esconder</div>
 <button id="eye" title="Esconder/mostrar interface (H)"><svg viewBox="0 0 24 24"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/><circle cx="12" cy="12" r="3"/></svg></button>
 
 <script>
@@ -579,15 +507,13 @@ body.clean #eye:hover{opacity:1}
   const slideNum= document.getElementById('slideNum');
   document.getElementById('slideTot').textContent = String(slides.length).padStart(2,'0');
 
-  // pré-computa as etapas (steps) de cada slide
   const stepsBySlide = slides.map(s => [...s.querySelectorAll('.step')]);
-
   let si = 0;   // slide atual
-  let pi = 0;   // etapa atual dentro do slide
 
   // dots
   slides.forEach((_,i)=>{
-    const d=document.createElement('div');d.className='dot';d.onclick=function(){goSlide(i,true);this.blur();};
+    const d=document.createElement('div');d.className='dot';
+    d.onclick=function(){goSlide(i);this.blur();};
     dotsBox.appendChild(d);
   });
   const dots=[...dotsBox.children];
@@ -608,59 +534,30 @@ body.clean #eye:hover{opacity:1}
     requestAnimationFrame(tick);
   }
 
-  function applyFocus(){
-    const steps=stepsBySlide[si];
-    steps.forEach((el,idx)=>{
-      el.classList.toggle('is-read', idx<pi);
-      el.classList.toggle('is-active', idx===pi);
-      // grupos de foco (cards) recebem destaque de "câmera"
-      el.classList.toggle('card', el.classList.contains('card')); // no-op safe
-      if(el.classList.contains('card')) el.classList.toggle('is-active', idx===pi);
-      if(el.classList.contains('row-step')) el.classList.toggle('is-active', idx===pi);
-      // dispara contadores ao focar
-      if(idx<=pi){const c=el.querySelector('[data-count]')||(el.matches('[data-count]')?el:null);if(c)animateCounter(c);}
-    });
-    // marca grupos que têm item ativo
-    slides[si].querySelectorAll('.focus-group').forEach(g=>{
-      g.classList.toggle('has-active', !!g.querySelector('.step.is-active'));
-    });
-    // timeline fill conforme avança
-    const fill=slides[si].querySelector('#tlFill');
-    if(fill){const n=steps.length;fill.style.width=(Math.min(pi,n-1)/(n-1)*100||0)+'%';}
-    // progresso global
-    const totalSteps=stepsBySlide.reduce((a,s)=>a+s.length,0);
-    let done=stepsBySlide.slice(0,si).reduce((a,s)=>a+s.length,0)+(pi+1);
-    progress.style.width=(done/totalSteps*100)+'%';
-  }
-
-  function goSlide(n,reset){
+  function goSlide(n){
     si=Math.max(0,Math.min(slides.length-1,n));
     track.style.transform=`translateX(${-si*100}vw)`;
     slides.forEach((s,i)=>s.classList.toggle('active',i===si));
     dots.forEach((d,i)=>d.classList.toggle('on',i===si));
     slideNum.textContent=String(si+1).padStart(2,'0');
-    pi = reset===false ? stepsBySlide[si].length-1 : 0;
-    // reseta contadores do slide para reanimar
-    slides[si].querySelectorAll('[data-count]').forEach(c=>{c.dataset.done='';});
-    applyFocus();
+    // leve cascata: todos os itens do slide entram quase juntos
+    stepsBySlide[si].forEach((el,idx)=>{ el.style.transitionDelay=(idx*55)+'ms'; });
+    // anima contadores do slide (reinicia pra reanimar a cada visita)
+    slides[si].querySelectorAll('[data-count]').forEach(c=>{c.dataset.done='';animateCounter(c);});
+    // barra de progresso = slide atual
+    progress.style.width=((si+1)/slides.length*100)+'%';
   }
 
-  function next(){
-    if(pi < stepsBySlide[si].length-1){ pi++; applyFocus(); }
-    else if(si < slides.length-1){ goSlide(si+1,true); }
-  }
-  function prev(){
-    if(pi>0){ pi--; applyFocus(); }
-    else if(si>0){ goSlide(si-1,false); }
-  }
+  function next(){ if(si<slides.length-1) goSlide(si+1); }
+  function prev(){ if(si>0) goSlide(si-1); }
 
   document.getElementById('next').onclick=function(){next();this.blur();};
   document.getElementById('prev').onclick=function(){prev();this.blur();};
   document.addEventListener('keydown',e=>{
     if(e.key==='ArrowRight'||e.key===' '||e.key==='PageDown'){e.preventDefault();next();}
     else if(e.key==='ArrowLeft'||e.key==='PageUp'){e.preventDefault();prev();}
-    else if(e.key==='Home'){goSlide(0,true);}
-    else if(e.key==='End'){goSlide(slides.length-1,false);}
+    else if(e.key==='Home'){goSlide(0);}
+    else if(e.key==='End'){goSlide(slides.length-1);}
     else if(e.key.toLowerCase()==='f'){
       if(!document.fullscreenElement)document.documentElement.requestFullscreen();
       else document.exitFullscreen();
@@ -669,20 +566,20 @@ body.clean #eye:hover{opacity:1}
   });
   document.getElementById('eye').onclick=function(){document.body.classList.toggle('clean');this.blur();};
 
-  // ---- preparar para exportar PDF (revela tudo + preenche números) ----
+  // ---- exportar PDF: revela tudo + preenche números ----
   function fmtCount(el){
     const target=parseFloat(el.dataset.count);
     const dec=(el.dataset.count.split('.')[1]||'').length;
     return (el.dataset.prefix||'')+target.toFixed(dec).replace('.',',')+(el.dataset.suffix||'');
   }
   function revealAllForPrint(){
-    document.querySelectorAll('.step').forEach(s=>{s.classList.add('is-read');s.classList.remove('is-active');});
+    document.querySelectorAll('.step').forEach(s=>{s.style.transitionDelay='0ms';});
     document.querySelectorAll('[data-count]').forEach(e=>{e.textContent=fmtCount(e);e.dataset.done='1';});
   }
   window.addEventListener('beforeprint',revealAllForPrint);
   if(location.search.indexOf('print')!==-1){revealAllForPrint();}
 
-  goSlide(0,true);
+  goSlide(0);
 })();
 </script>
 </body>

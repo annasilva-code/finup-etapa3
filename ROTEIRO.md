@@ -1,249 +1,116 @@
-# 🎬 ROTEIRO DE APRESENTAÇÃO — FinUP · Etapa 3
-### Impactos Macroeconômicos e Desenvolvimento Local
+# 🎬 Roteiro de Narração — FinUP · Etapa 4
+**Complexidade Econômica e Impacto Social (Cidades MIL)**
 
-**Como funciona a "máquina":**
-- Abra o arquivo `index.html` no navegador e aperte **F** (tela cheia).
-- A cada **clique na seta `›`** (ou tecla **→**), o slide **dá zoom/foco no próximo item** que está sendo falado — igual edição de vídeo. O resto escurece pra dar destaque.
-- Quando os itens do slide acabam, o próximo `›` **vira de slide** sozinho, com transição.
-- A seta `‹` (ou **←**) volta. Os pontinhos embaixo pulam direto pra um slide.
-
-> **Regra de ouro pra gravar:** a pessoa **só clica `›` DEPOIS** de terminar a frase do item anterior. Falou → clicou → o próximo item entra em foco → continua falando. Assim o vídeo fica sincronizado.
-
-**Tempo estimado:** ~6 a 7 minutos. Dá pra gravar tudo de uma vez ou cada pessoa grava sua parte.
+> Como funciona: a apresentação avança **slide a slide**. Cada vez que você clica na seta `›` (ou aperta `→`), o **slide inteiro já aparece de uma vez** — não é mais quadrado por quadrado. Leia o texto enquanto ele está na tela e, ao terminar, clique para passar ao próximo.
+> Atalhos: `→` avança · `←` volta · `F` tela cheia · `H` esconde a interface (pra gravar limpo).
 
 ---
 
-## 👤 Divisão dos integrantes
-| Integrante | Slides |
-|---|---|
-| **Anna Beatriz (Bia)** | 1 · Capa (abertura) + 9 · Síntese |
-| **Bianca** | 2 · O Cenário + 4 · PIB e Valor Agregado (3.1) |
-| **Gustavo** | 3 · Nossa Pesquisa de Campo + 8 · Cronograma |
-| **Flávio (Ambiplay)** | 5 · Projeções + 7 · Retenção de Divisas (3.3) |
-| **Samuel (Sam)** | 6 · Investimentos e Emprego (3.2) + 10 · Referências |
+## 🟢 SLIDE 1 — Capa
+
+> "Olá! Esta é a **Etapa 4** do nosso estudo sobre a **FinUP**.
+> Se nas etapas anteriores falamos do mercado e do impacto macroeconômico, agora a gente fecha o ciclo conectando três coisas: **sofisticação produtiva, identidade local e pautas sociais**.
+> Em outras palavras: como uma fintech feita por jovens do Rio Grande do Norte deixa a economia mais sofisticada, combate a desinformação e ainda protege a juventude."
+
+**→ clique para avançar**
 
 ---
 
-# 🎞️ SLIDE 1 — CAPA · 🗣️ ANNA BEATRIZ
-*(A logo e o título já aparecem ao abrir. Comece falando.)*
+## 🟢 SLIDE 2 — O fio condutor
 
-> "Olá! Somos o grupo da FinUP, e hoje vamos apresentar a Etapa 3 do nosso projeto: os **impactos macroeconômicos e o desenvolvimento local** que a nossa solução pode gerar."
+> "Toda a Etapa 4 gira em torno de **três perguntas**.
+> A primeira, de **Complexidade Econômica**: como um negócio digital ajuda o RN e o Brasil a desenvolver novas capacidades e a saltar para setores mais sofisticados?
+> A segunda, das **Cidades MIL**: de que forma a FinUP combate a desinformação dentro do seu nicho, que são as finanças?
+> E a terceira, a **pauta da UNICEF**: como o negócio impacta positivamente a vida de jovens e crianças — educação, segurança digital e renda ética?
+> Vamos responder uma por uma."
 
-**clique `›`** *(entra o selo "Estudo de Viabilidade Econômica")*
-> "Esse é um estudo de viabilidade econômica do nosso negócio."
-
-**clique `›`** *(entra o título grande)*
-> "O título resume nossa tese: a FinUP como ferramenta de **desenvolvimento regional e sustentabilidade macroeconômica**."
-
-**clique `›` `›`** *(entram a linha e o subtítulo)*
-> "Vamos analisar três frentes: geração de valor pro PIB, o mercado de trabalho potiguar e a retenção de divisas no país."
-
-**clique `›`** *(entram os nomes da equipe)*
-> "Esse trabalho é da nossa equipe, da disciplina de GECTI, na UFRN. E pra começar, passo pra Bianca falar do cenário."
-
-**clique `›`** → *vira pro Slide 2*
+**→ clique para avançar**
 
 ---
 
-# 🎞️ SLIDE 2 — O CENÁRIO · 🗣️ BIANCA
-*(O título "O Brasil que não controla o próprio dinheiro" já aparece.)*
+## 🟢 SLIDE 3 — 4.1 Complexidade Econômica (diagnóstico)
 
-> "Antes de falar do impacto da FinUP, é importante entender o problema. O Brasil vive uma crise de saúde financeira."
+> "Começando pela primeira. **Complexidade econômica** é um conceito dos economistas Hausmann e Hidalgo, de Harvard: ela mede o **conhecimento** que uma sociedade acumula e que aparece nos produtos que ela consegue fabricar. Quanto mais diversa e sofisticada a produção, mais rica e resiliente é a economia.
+> E aqui está o problema: o Brasil está **andando para trás**. Caímos para a **56ª posição** no índice mundial — 13 posições em uma década.
+> **65%** das nossas exportações já são commodities: é a chamada reprimarização, o país produzindo cada vez menos coisas sofisticadas.
+> E o Rio Grande do Norte é um caso extremo: **60,6%** do PIB industrial vem só do petróleo. A gente vende matéria-prima — sal, fruta, camarão — e compra produto industrializado."
 
-**clique `›`** *(entra o número 81,7 mi)*
-> "Hoje são **81,7 milhões de brasileiros inadimplentes** — recorde histórico. Quase metade dos adultos do país, segundo a Serasa."
-
-**clique `›`** *(entra o 80,2%)*
-> "E **80,2% das famílias estão endividadas** — o maior nível já registrado desde 2010, segundo a CNC."
-
-**clique `›`** *(entra o 47%)*
-> "O mais grave: **47% dos jovens da Geração Z não controlam as próprias finanças**, e só 9% usam aplicativo pra isso."
-
-**clique `›`** *(entra a frase final sobre o PISA)*
-> "Não é à toa: no exame de educação financeira da OCDE, o Brasil tirou só 416 pontos, contra 498 da média. É nesse vácuo que a FinUP entra. E pra mostrar que isso vale também aqui no RN, passo pro Gustavo."
-
-**clique `›`** → *vira pro Slide 3*
+**→ clique para avançar**
 
 ---
 
-# 🎞️ SLIDE 3 — NOSSA PESQUISA DE CAMPO · 🗣️ GUSTAVO
-*(Título "Validação de Mercado" já aparece.)*
+## 🟢 SLIDE 4 — 4.1 Subindo a escada da complexidade
 
-> "Esses são dados nacionais. Mas a gente quis ouvir o nosso público direto."
+> "Então, como a FinUP entra nessa história? A teoria diz que economias crescem **acumulando capacidades** e migrando para atividades vizinhas mais sofisticadas. E **software e inteligência artificial estão no topo dessa escada** — são conhecimento puro, que fica nas pessoas.
+> Para construir a FinUP, o RN precisa formar **desenvolvedores, engenheiros de IA e cientistas de dados**. Esse conhecimento é uma capacidade produtiva nova, que depois se reaproveita em outros setores.
+> E a demanda existe: o Brasil tem um **déficit de 530 mil profissionais de tecnologia**. A FinUP ajuda a formar e reter esse talento aqui no estado.
+> O macrossetor de tecnologia já é **6,5% do PIB** — R$ 762 bilhões. É um setor de alta complexidade onde a FinUP coloca o RN, que hoje quase não aparece nessa pauta."
 
-**clique `›`** *(entra a frase dos 75 jovens)*
-> "Aplicamos uma pesquisa com **75 jovens** — 88% deles do Rio Grande do Norte, e a maioria entre 18 e 24 anos. E o problema se confirma na prática:"
-
-**clique `›`** *(entra o 76%)*
-> "**76% já ficaram sem dinheiro antes do fim do mês.**"
-
-**clique `›`** *(entra o 70,7%)*
-> "**70,7% não usam nenhum aplicativo financeiro** hoje — ou seja, é um mercado em aberto."
-
-**clique `›`** *(entra o 92%)*
-> "E o melhor: **92% usariam a FinUP** — somando os que disseram 'sim' e 'talvez'."
-
-**clique `›`** *(entra o R$ 7,50)*
-> "A disposição a pagar valida um **ticket-médio em torno de R$ 7,50**, que é o preço que projetamos."
-
-**clique `›`** *(entra a fonte)*
-> "Tudo isso é dado primário, da nossa pesquisa de campo. Agora a Bianca mostra o impacto disso no PIB."
-
-**clique `›`** → *vira pro Slide 4*
+**→ clique para avançar**
 
 ---
 
-# 🎞️ SLIDE 4 — 3.1 PIB E VALOR AGREGADO · 🗣️ BIANCA
-*(Título "3.1 · PIB e Valor Agregado Potiguar" já aparece.)*
+## 🟢 SLIDE 5 — 4.2 Cidades MIL e desinformação
 
-> "Vamos ao primeiro item da Etapa 3: como a FinUP contribui pro PIB."
+> "Segunda pergunta: as **Cidades MIL**. MIL significa **Mídia e Informação** — é o conjunto de competências que a UNESCO chama de **'a primeira linha de defesa contra a desinformação'**: formar pessoas críticas diante do que leem, compartilham e em quem confiam.
+> E olha que interessante para a gente: **São Gonçalo do Amarante**, aqui no Rio Grande do Norte, foi uma das **10 cidades-piloto** desse programa Cidades MIL da UNESCO, lançado em 2025.
+> O problema é enorme: **85% das pessoas** estão preocupadas com a desinformação online, e cerca de **90% dos brasileiros** admitem já ter acreditado em conteúdo falso.
+> E a desinformação também é **financeira** — é exatamente nesse nicho que a FinUP atua."
 
-**clique `›`** *(entra o R$ 101,7 bi)*
-> "O PIB do Rio Grande do Norte passou de **R$ 101 bilhões** pela primeira vez, segundo o IBGE — quase 1% do PIB do Brasil."
-
-**clique `›`** *(entra o 72,4%)*
-> "E olha que importante: **72% desse PIB vêm do setor de serviços** — que é exatamente onde a FinUP atua."
-
-**clique `›`** *(entra o 3,59%)*
-> "Além disso, a economia criativa já é **3,59% do PIB nacional**, e a FinUP, sendo tecnologia e conhecimento, se encaixa nesse setor."
-
-**clique `›`** *(entra o card "Contribuição Setorial Direta")*
-> "Na contribuição direta: o Brasil tem mais de 1.700 fintechs e lidera a América Latina. A FinUP moderniza o setor de serviços do RN e captura valor das transações locais."
-
-**clique `›`** *(entra o card "Efeito Multiplicador Local")*
-> "E tem o efeito multiplicador: ao reduzir os juros de mora que os jovens pagam, esse dinheiro volta a circular no comércio local. Passo pro Flávio com as projeções."
-
-**clique `›`** → *vira pro Slide 5*
+**→ clique para avançar**
 
 ---
 
-# 🎞️ SLIDE 5 — PROJEÇÕES MACROECONÔMICAS · 🗣️ FLÁVIO
-*(Título "Projeções Macroeconômicas" já aparece.)*
+## 🟢 SLIDE 6 — 4.2 A IA da FinUP contra a desinformação financeira
 
-> "Aqui estão nossas projeções pros três primeiros anos, num cenário conservador."
+> "Vamos aos números desse nicho. Em 2024, os brasileiros perderam **R$ 10,1 bilhões** com golpes financeiros — um aumento de 17%. Só no PIX foram **R$ 6,5 bilhões** em fraudes confirmadas.
+> E quem ensina o jovem a lidar com dinheiro hoje? **73% dos novos investidores** aprenderam a investir com youtubers e influenciadores — um terreno fértil para promessas de 'renda fácil' e pirâmides.
+> É aqui que a FinUP funciona como um **instrumento de MIL**: o **assistente de inteligência artificial** entrega educação financeira imparcial e verificável, ajudando o jovem a reconhecer o golpe e o finfluencer irresponsável.
+> Porque só **35% dos brasileiros** têm letramento financeiro — e menos letramento significa mais vulnerabilidade à fraude."
 
-**clique `›`** *(entra a tabela com os cabeçalhos: Ano 1, Ano 2, Ano 3)*
-> "Dividimos em três fases: foco local, foco regional e consolidação."
-
-**clique `›`** *(entra a linha de Faturamento)*
-> "O **faturamento** estimado vai de R$ 450 mil no primeiro ano pra R$ 3,1 milhões no terceiro."
-
-**clique `›`** *(entra a linha de Retenção tributária)*
-> "Isso gera **retenção tributária** local, em ISS e ICMS, chegando a R$ 155 mil — dinheiro que fica no estado."
-
-**clique `›`** *(entra a linha de Empregos)*
-> "Em **empregos diretos e indiretos**, saímos de 12 e chegamos a 85 postos."
-
-**clique `›`** *(entra a linha de Capital atraído — em verde)*
-> "E projetamos atrair até **R$ 1 milhão de capital externo de fomento** pro Rio Grande do Norte."
-
-**clique `›`** *(entra a observação embaixo)*
-> "São projeções ancoradas em programas reais de fomento, que já vou detalhar. Mas antes, o Sam fala sobre emprego e investimento."
-
-**clique `›`** → *vira pro Slide 6*
+**→ clique para avançar**
 
 ---
 
-# 🎞️ SLIDE 6 — 3.2 INVESTIMENTOS E EMPREGO · 🗣️ SAMUEL
-*(Título "3.2 · Investimentos e Geração de Emprego" já aparece.)*
+## 🟢 SLIDE 7 — 4.3 Pauta UNICEF e Juventude
 
-> "Esse é o segundo ponto da Etapa 3: emprego e investimento."
+> "E chegamos à terceira pergunta: a **pauta da UNICEF**. A FinUP nasce alinhada às prioridades da UNICEF para a adolescência: **educação, habilidades para o futuro do trabalho e cidadania digital**.
+> Veja por quê: **1 em cada 3 usuários** de internet no mundo é uma criança — proteger esse público é pauta global.
+> No Brasil, **93% dos jovens de 9 a 17 anos** usam internet, e **30%** já tiveram contato com estranhos online.
+> A própria UNICEF tem um programa, o **Passport to Earning**, que ensina habilidades **digitais, financeiras e de empregabilidade** para jovens de 15 a 24 anos — exatamente o que a FinUP entrega."
 
-**clique `›`** *(entra o card "Postos Diretos")*
-> "Primeiro, os **empregos diretos**: a FinUP contrata gente de tecnologia — desenvolvimento, dados e segurança — absorvendo talentos da UFRN e do IFRN. O salário médio de um dev pleno no Brasil é quase R$ 8 mil."
-
-**clique `›`** *(entra o card "Cadeia Indireta")*
-> "Segundo, a **cadeia indireta**: segundo o IPEA, cada emprego em alta tecnologia gera até **6,9 empregos** em serviços locais — publicidade, conteúdo, consultorias."
-
-**clique `›`** *(entra o card "Atração de Capital")*
-> "Terceiro, **atração de capital**: existem programas reais aqui, como o Centelha do RN e o FIP Nordeste, um fundo de R$ 150 milhões que cita fintech explicitamente."
-
-**clique `›`** *(entra a frase final sobre o Nordeste)*
-> "E tem uma oportunidade enorme: o Nordeste tem **25% das startups do Brasil**, mas recebe menos de 1% do investimento. A FinUP ajuda a virar esse jogo. Passo pro Flávio falar de divisas."
-
-**clique `›`** → *vira pro Slide 7*
+**→ clique para avançar**
 
 ---
 
-# 🎞️ SLIDE 7 — 3.3 RETENÇÃO DE DIVISAS · 🗣️ FLÁVIO
-*(Título "3.3 · Soberania e Retenção de Divisas" já aparece.)*
+## 🟢 SLIDE 8 — 4.3 Educação, segurança digital e renda ética
 
-> "O terceiro ponto da Etapa 3 é o setor externo: como a FinUP impede que dinheiro saia do país."
+> "Esse impacto na juventude acontece em **três frentes**.
+> **Educação**: no PISA de 2022, o Brasil tirou só **416 pontos** em educação financeira, e 45% dos jovens de 15 anos não atingem o nível básico. A FinUP ensina onde a escola não chega, na linguagem deles.
+> **Segurança digital**: num ambiente cheio de golpe e 'renda fácil', a FinUP ensina o jovem a se proteger — letramento financeiro também é cidadania digital.
+> **Renda ética**: o rotativo do cartão chegou a **440% ao ano**, e as renegociações de dívida da Geração Z cresceram **49%**. A FinUP orienta o crédito consciente.
+> E não é pouca gente: aqui no RN, **quase 24% dos jovens** não estudam nem trabalham. A FinUP devolve a eles ferramentas de autonomia."
 
-**clique `›`** *(entra o US$ 52,9 bi)*
-> "O Brasil tem um déficit recorde de **US$ 52,9 bilhões** na balança de serviços — ou seja, divisas saindo do país, segundo o Banco Central."
-
-**clique `›`** *(entra o US$ 15,8 bi)*
-> "Só em **software, streaming e nuvem estrangeiros**, saíram quase **US$ 16 bilhões** num único ano."
-
-**clique `›`** *(entra o card "Substituição Estratégica")*
-> "A FinUP funciona como **alternativa nacional** a esses sistemas estrangeiros, que levam taxas e dados pra fora. Hoje, 85% das bandeiras de cartão no Brasil são estrangeiras."
-
-**clique `›`** *(entra o card "Exportação de Serviços")*
-> "E ainda há espaço pra exportar: o Brasil exporta pouquíssimo software. A FinUP pode mirar o Mercosul e os países que falam português, a CPLP — quase 300 milhões de pessoas. Passo pra Bia fechar o impacto."
-
-**clique `›`** → *vira pro Slide 8*
+**→ clique para avançar**
 
 ---
 
-# 🎞️ SLIDE 8 — CRONOGRAMA · 🗣️ GUSTAVO
-*(Título "Cronograma de Impacto Sistêmico" já aparece. A linha do tempo vai se preenchendo de verde a cada clique.)*
+## 🟢 SLIDE 9 — Síntese
 
-> "Pra organizar tudo isso, montamos um cronograma de impacto em quatro fases."
+> "Juntando tudo, dá pra ver por que a Etapa 4 **fecha o ciclo**.
+> A FinUP eleva a **sofisticação produtiva** do RN, formando capacidades de software e IA num estado dependente de commodities.
+> Ela trabalha **identidade e informação**, combatendo a desinformação financeira como um instrumento das Cidades MIL.
+> E cumpre uma **pauta social**, protegendo e capacitando a juventude com educação, segurança digital e renda ética.
+> No fim, é tecnologia de alta complexidade a serviço de uma juventude mais **informada, segura e financeiramente livre**."
 
-**clique `›`** *(acende a Fase I)*
-> "**Fase 1, Ativação:** contratação de engenharia local e início da atração de capital semente aqui na região."
-
-**clique `›`** *(acende a Fase II)*
-> "**Fase 2, Substituição:** a gente começa a substituir os apps de finanças estrangeiros em Natal e na Grande Natal."
-
-**clique `›`** *(acende a Fase III)*
-> "**Fase 3, Escala:** expansão pro resto do Nordeste, ampliando a base de impostos que fica no RN."
-
-**clique `›`** *(acende a Fase IV)*
-> "**Fase 4, Exportação:** a FinUP entra no mercado internacional e começa a atrair divisas de fora. Passo pra Bia."
-
-**clique `›`** → *vira pro Slide 9*
+**→ clique para avançar**
 
 ---
 
-# 🎞️ SLIDE 9 — SÍNTESE · 🗣️ ANNA BEATRIZ
-*(Título "Por que a FinUP importa para o RN e o Brasil" já aparece.)*
+## 🟢 SLIDE 10 — Referências
 
-> "Pra fechar, resumindo o impacto da FinUP em três palavras:"
+> "Por fim, as nossas fontes. A Etapa 4 pedia de 5 a 7 referências — e nós trouxemos **12 fontes oficiais**, do Atlas de Complexidade Econômica de Harvard à UNESCO, Febraban, Banco Central, UNICEF, IBGE, OCDE e Serasa.
+> Tudo verificado, para garantir que cada número apresentado aqui é real.
+> Era isso! Obrigado(a)."
 
-**clique `›`** *(entra "Gera valor")*
-> "**Gera valor** — atuando no setor de serviços, que é 72% do PIB do estado, e na economia criativa."
-
-**clique `›`** *(entra "Gera emprego")*
-> "**Gera emprego** — qualificado e em cadeia, fixando talento aqui no Rio Grande do Norte."
-
-**clique `›`** *(entra "Retém divisas")*
-> "**Retém divisas** — substituindo serviços estrangeiros e abrindo caminho pra exportação."
-
-**clique `›`** *(entra a frase final)*
-> "No fim, a FinUP é tecnologia, educação e gestão financeira como motor de **desenvolvimento regional sustentável**. Passo pro Sam com as fontes."
-
-**clique `›`** → *vira pro Slide 10*
-
----
-
-# 🎞️ SLIDE 10 — REFERÊNCIAS · 🗣️ SAMUEL
-*(Título "Referências" já aparece.)*
-
-**clique `›`** *(entram todas as fontes)*
-> "Todos os dados que apresentamos têm fonte oficial: IBGE, Banco Central, Serasa, CNC, OCDE, FIRJAN, Brasscom, IPEA, Distrito, FAPERN e ABES."
-
-**clique `›`** *(entra a observação final)*
-> "São **12 fontes oficiais mais a nossa pesquisa de campo** — acima do mínimo exigido pela Etapa 3. Muito obrigado!"
-
-*(fim — pode dar fade ou voltar pra capa com a tecla Home)*
-
----
-
-## 💡 Dicas pra gravação ficar profissional
-- **Tela cheia** (tecla F) e esconda a barra do navegador.
-- Grave com **OBS** ou a própria gravação de tela do celular/PC.
-- Quem clica pode ser **uma pessoa só** (o "operador") enquanto cada um narra — assim ninguém precisa mexer no teclado na hora de falar.
-- Se errar a fala, **espere 2 segundos parado** e repita a frase — facilita o corte na edição.
-- Os **números sobem animados** sozinhos quando entram em foco; deixe um meio-segundo antes de falar o número, pra dar o efeito.
+**🎬 Fim.**
